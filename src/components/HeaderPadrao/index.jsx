@@ -557,7 +557,7 @@ const fazerLogout = (rotaDestino) => {
 
   const actualPathname = location.pathname.split('/')[1];
   console.log(actualPathname);
-  if(actualPathname === 'login-operadora'){
+  if(actualPathname === 'login-operadora' || actualPathname === ''){
     return null;
   } else {
     return (
