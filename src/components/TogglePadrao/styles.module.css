@@ -1,0 +1,190 @@
+.toggleContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelText {
+  white-space: nowrap;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.25rem;
+}
+
+.slidingToggleContainer {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  height: calc(2.5rem - 2px);
+  width: 4.5rem;
+}
+
+.slidingToggleContainer:hover {
+  background-color: var(--neutral-100);
+}
+
+.slidingContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  width: 200%;
+}
+
+.slidingContentActive {
+  transform: translateX(-50%);
+}
+
+.option {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cinza-escuro);
+  font-size: 0.85rem;
+  line-height: unset;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.option:first-child{
+  padding-right: 0.75rem;
+} 
+
+.option:last-child{
+  padding-left: 0.75rem;
+} 
+
+.toggleDivider{
+  position: absolute;
+  top: 0;
+  right: -0.75rem;
+  width: 1.5rem;
+  height: 100%;
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-claro);
+  border-top: 0;
+  border-bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggleDividerActive {
+  right: calc(100% - 0.75rem);
+}
+
+.toggleButton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.toggleButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.toggleButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.toggleButton:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.slidingToggleContainer.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.slidingToggleContainer.disabled .slidingContent {
+  pointer-events: none;
+}
+
+.sizeSmall {
+  width: 120px;
+  height: calc(2.5rem - 2px);
+}
+
+.sizeSmall .option {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.sizeMedium {
+  width: 140px;
+  height: calc(2.5rem - 2px);
+}
+
+.sizeMedium .option {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sizeLarge {
+  width: 160px;
+  height: calc(2.5rem - 2px);
+}
+
+.sizeLarge .option {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sizeCompact {
+  width: 100px;
+  height: calc(2.5rem - 2px);
+}
+
+.sizeCompact .option {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .sizeMedium {
+    width: 150px;
+    height: calc(2.5rem - 2px);
+  }
+  
+  .sizeLarge {
+    width: 170px;
+    height: calc(2.5rem - 2px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sizeMedium {
+    width: 160px;
+    height: calc(2.5rem - 2px);
+  }
+  
+  .sizeLarge {
+    width: 180px;
+    height: calc(2.5rem - 2px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .sizeMedium {
+    width: 170px;
+    height: calc(2.5rem - 2px);
+  }
+  
+  .sizeLarge {
+    width: 190px;
+    height: calc(2.5rem - 2px);
+  }
+}

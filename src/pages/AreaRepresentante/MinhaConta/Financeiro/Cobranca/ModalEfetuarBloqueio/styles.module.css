@@ -1,0 +1,273 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.modalContent {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  max-width: 800px;
+  width: calc(100% - 2rem);
+  max-height: 90vh;
+  margin-bottom: 0.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 0;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.modalHeaderLeft {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.modalHeaderLeft i {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
+.modalTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modalCloseButton {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 16px;
+  text-align: center;
+}
+
+.modalBody {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-primary);
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mensagemContainer {
+  position: relative;
+}
+
+.contadorCaracteres {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.resumoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resumoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+}
+
+.resumoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  background: var(--bg-secondary);
+}
+
+.resumoLabel {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.resumoValue {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.mensagemResumo {
+  margin-top: 1rem;
+}
+
+.mensagemResumo h6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.mensagemTextarea {
+  min-height: 80px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.agendamentoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.horarioBox {
+  padding: 1rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.horarioBox h6 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.horarioDisplay {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+.agendamentoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalFooter {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-secondary);
+  justify-content: flex-end;
+}
+
+.modalButtonContinuar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modalButtonContinuar:hover {
+  background: #218838;
+}
+
+.modalButtonContinuar i {
+  font-size: 0.7rem;
+}
+
+.modalButtonVoltar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modalButtonVoltar:hover {
+  background: #c82333;
+}
+
+.modalButtonVoltar i {
+  font-size: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    max-width: 900px;
+  }
+  
+  .modalTitle {
+    font-size: 0.9rem;
+  }
+  
+  .resumoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 1000px;
+  }
+  
+  .modalTitle {
+    font-size: 1rem;
+  }
+  
+  .resumoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .modalContent {
+    max-width: 1200px;
+  }
+  
+  .resumoGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+} 

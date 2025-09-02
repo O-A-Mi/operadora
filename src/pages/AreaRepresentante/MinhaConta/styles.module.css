@@ -1,0 +1,227 @@
+.areaRepresentanteContainer {
+  padding: 1.75rem;
+  margin: 0;
+  display: flex;
+  background: var(--cinza-claro-2);
+  z-index: 2;
+  min-height: calc(100dvh - var(--header-height));
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.areaRepresentanteContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.headerSection {
+  flex-direction: column;
+  padding: 0.75rem 0 1.5rem;
+  width: 100%;
+  gap: 1.5rem;
+  display: flex;
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  color: var(--header-title-color-light);
+}
+
+.mobileHeader {
+  padding: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.pageRouteContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  order: 1;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.pageRoute {
+  color: var(--cinza-padrao);
+  font-weight: 400;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: default;
+  text-transform: capitalize;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pageRouteItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.pageRouteItem:hover {
+  color: var(--cor-padrao);
+}
+
+.pageRouteItem i {
+  font-size: 0.75rem;
+  color: var(--cinza);
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  color: var(--cor-padrao);
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+  width: 19rem;
+  min-width: 19rem;
+  order: 2;
+  position: relative;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainSection {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contentColumn {
+  width: 100%;
+}
+
+.sidebarColumn {
+  box-shadow: var(--sidebar-shadow-light);
+  width: 26%;
+  z-index: 2;
+}
+
+.mobileSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateX(-100%);
+}
+
+.mobileSidebar.open {
+  transform: translateX(0);
+}
+
+/* UserMenu Styles */
+.userMenu {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1.5rem;
+  gap: 1rem;
+  min-width: 4rem;
+  width: 4rem;
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100dvh - var(--header-height));
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 4rem;
+  width: 3rem;
+  padding: 1rem;
+  color: var(--menuitem-color-light);
+  font: 400 16px Montserrat, sans-serif;
+  text-decoration: none;
+  border-bottom: var(--menuitem-border-light);
+  cursor: pointer;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menuItem:hover,
+.menuItem:focus {
+  color: var(--cor-padrao);
+  border-bottom-color: var(--cor-padrao);
+}
+
+.menuItemActive {
+  color: var(--cor-padrao);
+  border-bottom-color: var(--cor-padrao);
+}
+
+.menuItemActive:hover {
+  color: var(--cor-padrao-escuro);
+  border-bottom-color: var(--cor-padrao-escuro);
+}
+
+.menuItem i {
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .headerSection {
+    padding: 2rem 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .areaRepresentanteContainer {
+    padding: 0;
+  }
+
+  .areaRepresentanteContent {
+    margin: 0 auto;
+    padding: 0.5rem 0.85rem 1.65rem;
+  }
+
+  .mainSection {
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 100%;
+  }
+
+  .sidebarColumn {
+    min-width: 4rem;
+    width: 4rem;
+  }
+
+  .headerSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0rem 0;
+  }
+
+  .pageRoute {
+    order: 2;
+  }
+
+  .pageTitle {
+    order: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+

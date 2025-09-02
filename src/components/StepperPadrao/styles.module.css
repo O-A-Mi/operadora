@@ -1,0 +1,406 @@
+.stepperPageTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 1rem;
+ }
+
+.stepperContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stepperWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+.toggleGrid {
+  grid-template-columns: repeat(6, 1fr);
+}
+}
+
+@media (min-width: 1024px) {
+.toggleGrid {
+  grid-template-columns: repeat(6, 1fr);
+}
+}
+
+@media (min-width: 1280px) {
+.toggleGrid {
+  grid-template-columns: repeat(6, 1fr);
+}
+}
+
+.stepper {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+flex-wrap: nowrap;
+}
+
+.step {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.5rem;
+cursor: pointer;
+transition: all 0.3s ease;
+min-width: 40px;
+flex-shrink: 0;
+}
+
+.step:hover {
+transform: translateY(-2px);
+}
+
+.stepIcon {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid;
+transition: all 0.3s ease;
+background-color: #e5e7eb;
+border-color: #d1d5db;
+}
+
+.stepIcon i {
+font-size: 0.9rem;
+color: #9ca3af;
+transition: color 0.3s ease;
+}
+
+.activeStep .stepIcon {
+background-color: var(--azul-padrao);
+border-color: var(--azul-padrao);
+box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.activeStep .stepIcon i {
+color: white;
+}
+
+.stepLine {
+width: 30px;
+height: 2px;
+background-color: #e5e7eb;
+transition: background-color 0.3s ease;
+flex-shrink: 0;
+}
+
+.stepContent {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.stepContent {
+width: 100%;
+}
+
+.stepScreen {
+width: 100%;
+transition: opacity 0.3s ease;
+}
+
+.activeScreen {
+display: block;
+opacity: 1;
+}
+
+.hiddenScreen {
+display: none;
+opacity: 0;
+}
+
+@media (min-width: 365px) and (max-width: 767px) {
+.stepper {
+  display: none;
+}
+
+.mobileStepper {
+  width: 100%;
+  position: relative;
+}
+
+.mobileStepSelector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 120px;
+}
+
+.mobileNavButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--azul-padrao);
+  font-size: 1rem;
+}
+
+.mobileNavButton:hover:not(.disabled) {
+  background-color: #eff6ff;
+  transform: scale(1.1);
+}
+
+.mobileNavButton.disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.mobileNavButton.disabled:hover {
+  background-color: transparent;
+  transform: none;
+}
+
+.mobileStepContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.mobileStepContent:hover {
+  transform: scale(1.05);
+}
+
+.mobileStepIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.mobileStepContent:hover .mobileStepIcon {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mobileStepIcon i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.mobileStepName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.dropdownArrow {
+  font-size: 0.8rem;
+  color: #6b7280;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dropdownArrow.rotated {
+  transform: rotate(180deg);
+}
+
+.mobileDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mobileDropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mobileDropdownItem:last-child {
+  border-bottom: none;
+}
+
+.mobileDropdownItem:hover {
+  background-color: #f9fafb;
+}
+
+.mobileDropdownItem.activeItem {
+  background-color: #eff6ff;
+}
+
+.mobileDropdownIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+
+.mobileDropdownIcon i {
+  font-size: 0.9rem;
+}
+
+.mobileDropdownLabel {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.mobileDropdownItem.activeItem .mobileDropdownLabel {
+  font-weight: 500;
+  color: var(--azul-padrao);
+}
+}
+
+@media (min-width: 768px) {
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 0.8rem;
+}
+
+.stepper > *:not(.stepLine) {
+  justify-self: center;
+}
+
+.stepIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.stepIcon i {
+  font-size: 1.25rem;
+}
+
+.stepLine {
+  display: block;
+  width: 100%;
+  height: 2px;
+  align-self: center;
+}
+
+.stepLine:nth-child(12) {
+  display: none;
+}
+}
+
+@media (min-width: 1024px) {
+.stepper {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+}
+
+.step {
+  min-width: 40px;
+  flex: 0 0 auto;
+}
+
+.stepIcon {
+  width: 45px;
+  height: 45px;
+}
+
+.stepIcon i {
+  font-size: 1rem;
+}
+
+.stepLine {
+  width: 15px;
+  display: block;
+}
+
+.stepper .stepLine:nth-child(12) {
+  display: block;
+}
+}
+
+@media (min-width: 1280px) {
+.stepper {
+  gap: 0.8rem;
+}
+
+.step {
+  min-width: 50px;
+}
+
+.stepIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.stepIcon i {
+  font-size: 1.25rem;
+}
+
+.stepLine {
+  width: 25px;
+}
+}
+
+@media (min-width: 1650px) {
+.stepper {
+  gap: 1rem;
+}
+
+.step {
+  min-width: 60px;
+}
+
+.stepIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.stepIcon i {
+  font-size: 1.5rem;
+}
+
+.stepLine {
+  width: 40px;
+}
+}

@@ -1,0 +1,98 @@
+.grupoBotoes {
+  display: flex;
+  gap: 0;
+}
+
+.botaoWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.botao {
+  background: transparent;
+  color: rgb(94, 94, 94);
+  padding: 5px 10px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: 1px solid gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  gap: 4px;
+  transition: 0.2s;
+}
+
+.botao:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.botaoWrapper:last-child .botao {
+  border-right: none;
+}
+
+/* DROPDOWN */
+.dropdownMenuFixed {
+  position: fixed;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid gray;
+  border-radius: 4px;
+  /* min-width: 140px; */
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  padding: 4px 0;
+
+  /* SCROLL */
+  max-height: 10rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdownMenuFixed::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdownMenuFixed::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 3px;
+}
+.dropdownMenuFixed::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdownItem:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 600px ){
+  .dropdownMenuFixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 90vw;
+    width: auto;
+    max-height: none;
+    border-radius: 0;
+    overflow-y: auto;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .dropdownItem {
+    padding: 16px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+  }
+}

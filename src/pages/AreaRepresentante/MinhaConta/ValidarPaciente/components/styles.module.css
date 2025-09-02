@@ -1,0 +1,117 @@
+.modalValidacao{
+    display: flex;
+    flex-direction: column;
+    background: var(--branco);
+    border-radius: 1rem;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    position: absolute;
+    width: 30rem;
+    height: 21.5rem;
+    z-index: 4;
+}
+
+.modalValidacaoHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-padrao);
+}
+
+.modalValidacaoTitle{
+    color: var(--cinza-padrao);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modalValidacaoContent{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: var(--cinza-padrao);
+    font-size: 0.95rem;
+    font-weight: 500;
+    max-width: 100%;
+    gap: 1rem;
+}
+
+.modalValidacaoData{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.modalValidacaoDataValue{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modalValidacaoDataLabel{
+    color: var(--cinza-padrao);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modalValidacaoDataValue{
+    color: var(--cor-padrao);
+    font-size: 0.9rem;    
+    font-weight: 600;
+    margin: 0;
+}
+
+.modalValidacaoLista{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modalValidacaoItem{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modalValidacaoItemValue{
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    border-radius: 5rem;
+}
+
+.modalValidacaoItemValue.status{
+    border: 1px solid var(--cor-dinamica);
+    color: var(--cor-dinamica);
+    min-width: 5rem;
+    text-align: center;
+}
+
+.agendarSubmit{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 2.5rem;
+    color: var(--branco);
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--cor-padrao);
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    align-self: center;
+    margin-top: 0.75rem;
+}
+
+.modalValidacaoFooter{
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    border-top: 1px solid var(--cinza-claro);
+}

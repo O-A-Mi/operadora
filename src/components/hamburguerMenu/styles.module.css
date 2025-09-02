@@ -1,0 +1,319 @@
+.hamburguerContainer {
+  position: relative;
+  z-index: 1002;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hamburguerContainer {
+    display: block;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .dropdownMenu {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    min-width: 260px;
+    max-width: 85vw;
+    z-index: 1003;
+  }
+
+  .hamburguerButton {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .hamburguerLine {
+    width: 1rem;
+    height: 1.5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hamburguerButton {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .hamburguerLine {
+    width: 0.875rem;
+    height: 1.25px;
+  }
+}
+
+.hamburguerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hamburguerButton:hover {
+  transform: translateY(-1px);
+}
+
+.hamburguerButton:active {
+  transform: translateY(0);
+}
+
+.hamburguerLine {
+  width: 1.5rem;
+  height: 2px;
+  background: var(--branco);
+  transition: all 0.3s ease;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+.hamburguerStatusDot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid var(--branco);
+}
+
+.hamburguerStatusDotAtivo {
+  background: #3BA55D;
+}
+
+.hamburguerStatusDotInativo {
+  background: #6B7280;
+}
+
+.hamburguerButton.active .hamburguerLine:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.hamburguerButton.active .hamburguerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguerButton.active .hamburguerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 1029px) {
+  .hamburguerButton.active .hamburguerLine:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+  .hamburguerButton.active .hamburguerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hamburguerButton.active .hamburguerLine:nth-child(1) {
+    transform: rotate(45deg) translate(2.5px, 2.5px);
+  }
+
+  .hamburguerButton.active .hamburguerLine:nth-child(3) {
+    transform: rotate(-45deg) translate(3.5px, -3.5px);
+  }
+}
+
+.dropdownMenu {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  min-width: 280px;
+  max-width: 90vw;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  z-index: 1003;
+}
+
+.dropdownMenu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--primary-color, #00288de5);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menuLogo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.menuTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.menuContent {
+  padding: 0.5rem 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.menuSection {
+  margin-bottom: 0.5rem;
+}
+
+.menuSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0.75rem 1.25rem 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.menuItem:hover {
+  background: #f8f9fa;
+  color: var(--primary-color, #00288de5);
+}
+
+.menuItem:active {
+  background: #e9ecef;
+}
+
+.menuIcon {
+  width: 1.25rem;
+  font-size: 1.125rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.menuIconWrapper {
+  width: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusMenuIconDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid var(--branco);
+}
+
+.statusMenuIconDotAtivo {
+  background: #3BA55D;
+}
+
+.statusMenuIconDotInativo {
+  background: #d83939;
+}
+
+.menuLabel {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.logoutItem {
+  color: #dc3545;
+}
+
+.logoutItem:hover {
+  background: #fff5f5;
+  color: #c82333;
+}
+
+.logoutItem .menuIcon {
+  color: inherit;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  backdrop-filter: blur(2px);
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu.open {
+  animation: slideDown 0.3s ease;
+}
+
+.menuContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menuContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.menuContent::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.menuContent::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.hamburguerButton:focus-visible {
+  outline: 2px solid #4a90ff;
+  outline-offset: 2px;
+}
+
+.menuItem:focus-visible {
+  outline: 2px solid var(--primary-color, #00288de5);
+  outline-offset: -2px;
+}

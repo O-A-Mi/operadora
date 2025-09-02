@@ -1,0 +1,102 @@
+[
+  {
+    "sequencial": "001",
+    "codigoBanco": "Nubank",
+    "codigoRetorno": "06",
+    "dataOcorrencia": "15/01/2024",
+    "valor": "R$ 150,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 4 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "002",
+    "codigoBanco": "Itau",
+    "codigoRetorno": "02",
+    "dataOcorrencia": "16/01/2024",
+    "valor": "R$ 89,90",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 5 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "003",
+    "codigoBanco": "Bradesco",
+    "codigoRetorno": "06",
+    "dataOcorrencia": "17/01/2024",
+    "valor": "R$ 120,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 6 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "004",
+    "codigoBanco": "Nubank",
+    "codigoRetorno": "03",
+    "dataOcorrencia": "18/01/2024",
+    "valor": "R$ 200,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 7 84410026000",
+    "status": "Rejeitado",
+    "mensagem": "Saldo insuficiente"
+  },
+  {
+    "sequencial": "005",
+    "codigoBanco": "Itau",
+    "codigoRetorno": "06",
+    "dataOcorrencia": "19/01/2024",
+    "valor": "R$ 75,50",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 8 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "006",
+    "codigoBanco": "Bradesco",
+    "codigoRetorno": "04",
+    "dataOcorrencia": "20/01/2024",
+    "valor": "R$ 180,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 9 84410026000",
+    "status": "Cancelado",
+    "mensagem": "Boleto cancelado"
+  },
+  {
+    "sequencial": "007",
+    "codigoBanco": "Nubank",
+    "codigoRetorno": "06",
+    "dataOcorrencia": "21/01/2024",
+    "valor": "R$ 350,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 0 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "008",
+    "codigoBanco": "Itau",
+    "codigoRetorno": "02",
+    "dataOcorrencia": "22/01/2024",
+    "valor": "R$ 95,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 1 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "009",
+    "codigoBanco": "Bradesco",
+    "codigoRetorno": "06",
+    "dataOcorrencia": "23/01/2024",
+    "valor": "R$ 450,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 2 84410026000",
+    "status": "Pago",
+    "mensagem": "Pagamento confirmado"
+  },
+  {
+    "sequencial": "010",
+    "codigoBanco": "Nubank",
+    "codigoRetorno": "03",
+    "dataOcorrencia": "24/01/2024",
+    "valor": "R$ 280,00",
+    "nossoNumero": "34191.79001 01043.510047 91020.150008 3 84410026000",
+    "status": "Rejeitado",
+    "mensagem": "Conta bloqueada"
+  }
+] 

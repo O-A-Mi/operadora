@@ -1,0 +1,372 @@
+/* PROVISORIO */
+
+.MainContent {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+    position: relative; 
+    top: -4rem;
+}
+
+.container {
+    width: 650px;
+    max-width: 1200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-moldura-50);
+    padding: 1rem;
+    border: 0.5px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    box-shadow: var(--container-box-shadow);
+    gap: 1rem;
+}
+
+.InputCreditCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 1.5rem;
+}
+
+.Header i {
+    color: var(--cor-padrao);
+}
+
+.HeaderCamp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    max-width: 67%;
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    color: var(--cinza-padrao);
+    margin-top: 1rem;
+    position: relative;
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 1rem;
+}
+
+.DadosPag {
+    font-size: 0.95rem;
+    border-top: 1px solid var(--cinza-claro);
+    padding-top: 1rem;
+    width: 100%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.DadosPag i {
+    color: var(--cor-padrao);
+}
+
+.planRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.planCell {
+    width: 100%;
+    display: flex;
+    flex-basis: 100%; 
+}
+
+.DadosEmpresa {
+    font-size: 1.25rem;
+    padding-top: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.DadosEmpresa i {
+    color: var(--cor-padrao);
+}
+/* 
+.subHeaderEmpresa {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    color: var(--cinza-padrao);
+    margin-top: 0.5rem;
+    position: relative;
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 1rem;
+} */
+
+.CardCliente {
+    width: 100%;
+    background-color: var(--indigo-50);
+    border: 1px solid var(--indigo-50);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--container-box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.CardClienteContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.CardClienteTitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cinza-padrao);
+}
+
+.CardClienteInfo {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.vendaClienteContent {
+    display: flex;
+    gap: 1rem;
+}
+
+.ButtonPagamento {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 1rem;
+}
+
+.ButtonPagamento button i { 
+    margin-right: 0.5rem;
+}
+
+.buttonSelected {
+    color: var(--cor-padrao);
+    background: transparent;
+    border: 1px solid var(--cor-padrao);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonNotSelected {
+    background-color: transparent;
+    color: var(--cinza-padrao);
+    border: 1px solid var(--cinza-claro);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.buttonNotSelected:hover {
+    color: var(--cor-padrao);
+    border: 1px solid var(--cor-padrao);
+    transform: scale(1.05);
+}
+
+
+.FormaPagSelecionada {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.infoText, .infoTextBarcode, .infoTextPIX {
+    font-size: 0.85rem;
+    color: var(--cinza-padrao);
+    margin-top: 0.5rem;
+}
+
+.infoTextBarcode {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.infoTextBarcode i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.infoTextPIX {
+    display: flex;
+}
+
+.infoTextPIX img {
+    width: 90px;
+    margin-right: 1rem;
+}
+
+.ImagePIX {
+    position: relative;
+    top: -1.5rem;
+}
+
+.SubInfo, .SubInfoPIX {
+    font-size: 0.75rem;
+    color: var(--cinza-padrao);
+    font-style: italic;
+}
+
+.SubInfoPIX {
+   position: relative;
+   top: -1.5rem;
+}
+/* modal dados */
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.VizualizarDados {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.infoButtonModal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--cor-padrao);
+    gap: 0.5rem;
+    border: 1px solid var(--cor-padrao);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.infoButtonModal:hover {
+    background-color: var(--cor-padrao);
+    color: var(--branco);
+}
+.modalContent {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cinza-claro);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modalTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+}
+
+.modalCloseButton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--cinza-padrao);
+    transition: all 0.2s ease-in-out;
+}
+
+.modalCloseButton:hover {
+    color: var(--rose-600);
+    transform: scale(1.1);
+}
+
+
+.modalBody {
+    padding-top: 1rem;
+}
+
+
+.cardResumoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .planCell {
+        flex-basis: calc(50% - 0.5rem); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .planCell {
+        flex-basis: calc(33.333% - 0.666rem); 
+    }
+}
+@media (min-width: 768px) {
+    .InputAlign {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .InputAlign {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}

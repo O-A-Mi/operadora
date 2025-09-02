@@ -1,0 +1,122 @@
+.origemLancamentoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filtroTabelaField {
+  border-radius: 8px;
+}
+
+.filtroTabelaContent {
+  width: 100%;
+}
+
+.sectionsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionPanel {
+  border-radius: 6px;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0 1rem 0;
+ }
+
+.sectionTitle i {
+  font-size: 1rem;
+}
+
+.tabContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: end;
+  animation: fadeIn 0.4s ease-in-out;
+  margin-right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mensagensGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mensagemContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.importanteContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.contadorCaracteres {
+  font-size: 0.8rem;
+  text-align: right;
+  padding: 0 0.5rem;
+  margin-top: 0.25rem;
+  color: var(--text-secondary, #666);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 1rem;
+  }
+  
+  .tabContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .mensagensGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+} 

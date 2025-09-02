@@ -1,0 +1,109 @@
+.loginform {
+    width: 100%;
+}
+
+.titulo{
+    font-size: 21px;
+}
+
+.InputContainerSeguranca {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.Option {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.areaPesquisa {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.pesquisarOption {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.textAreaSeguranca {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+.tabelaPadrao {
+    color: #000;
+}
+
+
+@media (min-width: 768px) {
+    .divContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .Option {
+        margin-right: 2rem;
+    }
+
+    .InputContainer {
+        flex-direction: column;
+    }
+
+    .InputContainerSeguranca {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .divContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .Option {
+        margin-right: 2rem;
+        gap: 0;
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .InputContainer {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .InputContainerSeguranca{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .areaPesquisa {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .pesquisarOption{
+        width: 50%;
+        gap: 0;
+    }
+
+    .textAreaSeguranca{
+        margin: 1rem;
+        gap: 0;
+    }
+}

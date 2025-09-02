@@ -1,0 +1,457 @@
+.lancamentoContainer input[type="number"]::-webkit-outer-spin-button,
+.lancamentoContainer input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.lancamentoContainer input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.lancamentoContainer * input[type="number"]::-webkit-outer-spin-button,
+.lancamentoContainer * input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.lancamentoContainer * input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.lancamentoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lancamentoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lancamentoTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+
+.lancamentoContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filtroTabelaField {
+  border-radius: 8px;
+}
+
+.filtroTabelaContent {
+  width: 100%;
+}
+
+.filtroTabelaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtroTabelaTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+
+.filtroTabelaButton {
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: var(--red-600);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+}
+
+.filtroTabelaButton:hover {
+  background-color: var(--red-800);
+}
+
+.tabsContainer {
+  width: 100%;
+}
+
+.tabsHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.tabButton:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tabButton.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabButton i:first-child {
+  font-size: 1rem;
+}
+
+.tabButton i:last-child {
+  font-size: 0.8rem;
+  margin-left: auto;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  transform: rotate(0deg);
+}
+
+.tabButton.active i:last-child {
+  transform: rotate(180deg);
+}
+
+.tabPanel {
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.tabPanel.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.tabPanel.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 1rem;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.tabContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: end;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.novoSection {
+  border: 1px solid var(--border-secondary);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.novoSectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+ }
+
+.novoFieldsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.novoFieldsRow:last-child {
+  margin-bottom: 0;
+}
+
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  padding: 0.6rem;
+  min-width: 200px;
+}
+
+.toggleContainer .toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6c757d;
+  transition: 0.4s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 24px;
+}
+
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 50%;
+}
+
+.toggleInput:checked + .toggleSlider {
+  background-color: var(--primary-color, #007bff);
+}
+
+.toggleInput:focus + .toggleSlider {
+  box-shadow: 0 0 4px var(--primary-color, #007bff);
+}
+
+.toggleInput:checked + .toggleSlider:before {
+  transform: translateX(26px);
+}
+
+.toggleField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.toggleLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.25rem;
+  color: var(--text-primary);
+}
+
+.toggleButton {
+  appearance: none;
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  height: calc(2.5rem - 2px);
+  font-size: 0.85rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.toggleButton:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-secondary);
+  transform: translateY(-1px);
+}
+
+.toggleButton.toggleActive {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggleButton.toggleActive:hover {
+  background-color: var(--primary-color-dark, #0056b3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tabelaSection {
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+
+@media (max-width: 767px) {
+  .tabContent > * {
+    min-width: 100%;
+    flex: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .lancamentoContainer {
+    gap: 1.25rem;
+  }
+  
+  .lancamentoTitle {
+    font-size: 1.15rem;
+  }
+
+
+  
+  .filtroTabelaHeader {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .filtroTabelaButton {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .tabsHeader {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tabButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    width: auto;
+    min-width: 140px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lancamentoContainer {
+    gap: 1.5rem;
+  }
+  
+  .lancamentoTitle {
+    font-size: 1.25rem;
+  }
+
+  .filtroTabelaHeader {
+    gap: 1rem;
+  }
+  
+  .tabButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    min-width: 160px;
+  }
+  
+  .novoSection {
+    padding: 1.5rem;
+  }
+  
+  .novoFieldsRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .toggleButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .toggleContainer {
+    gap: 1rem;
+  }
+  
+  .toggleContainer {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .lancamentoContainer {
+    gap: 2rem;
+  }
+  
+  .tabButton {
+    min-width: 180px;
+  }
+  
+  .novoSection {
+    padding: 2rem;
+  }
+  
+  .novoFieldsRow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .toggleButton {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+} 

@@ -1,0 +1,47 @@
+.InputEditor {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.wysiwyg {
+    min-height: 225px;
+    border: transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--branco);
+    color: var(--preto);
+    resize: none;
+}
+
+
+.InputAlign {
+    display: grid;
+    justify-content: center;
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .InputAlign {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .InputAlign {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}

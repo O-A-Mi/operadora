@@ -1,0 +1,283 @@
+.lotesContainer,
+.lotesContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lotesTitleTela{
+    color: var(--cor-padrao);
+    margin: 0;
+}
+.lotesSection{
+    flex-direction: column;
+    background: #ffffff;
+    display: flex;
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+.buscaLoteTitle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    color: var(--cinza-padrao);
+}
+
+.buttonFilter {
+  appearance: none;
+  border: 1px solid var(--cor-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: transparent;
+  color: var(--cor-padrao);
+  cursor: pointer;
+}
+
+.pText{
+    color: var(--cinza-padrao);
+    font-size: 0.95rem;
+}
+
+.animated {
+    animation: jello-vertical 0.9s both;
+}
+
+@keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.9, 1.15, 1);
+    }
+    40% {
+      transform: scale3d(1.15, 0.9, 1);
+    }
+    50% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+.buscaLoteInputs{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.buscaLoteButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+}
+.buttonStyle{
+    border-radius: 6px;
+    border: 1px solid var(--cinza-claro);
+    padding: 0.5rem 2rem;
+    font-size: 20px;
+    color: var(--cinza-padrao);
+    outline: none;
+    appearance: none;
+}
+.tableTitle{
+    background: azure;
+    border-radius: 70px;
+    border: 1px solid black;
+} 
+
+.lotesTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 16px 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+  background-color: #0047AB;
+  color: white;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  color: green;
+  border: 1px solid green;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.detalhar {
+  color: #007BFF;
+
+  text-decoration: none;
+  font-weight: bold;
+}
+.buscaLote{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.startLabel{
+    font-size: 15px;
+    color: var(--cinza-escuro);
+}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.buscaloteSelect{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+.selectInputField{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.selectInput{
+  width: 100%;
+}
+.selectInputField i{
+  position: absolute;
+  right: .75rem;
+  color: var(--cinza-padrao);
+  user-select: none;
+  pointer-events: none;
+}
+
+.filtroTabelaBody{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.filtroTabelaField{
+    background: var(--branco);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+.buttonDetalhar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: none;
+    color: blue;
+}
+.tabelaDocumento{
+    white-space: nowrap;
+}
+.tabelaStatus{
+    border: 1px solid green;
+    color: green;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.tabelaValor{
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+.selectInput{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    flex: 1;
+    transition: border 0.2s ease-in-out;
+}
+.textInput{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    text-transform: lowercase;
+    flex: 1;
+    transition: border 0.2s ease-in-out;
+    appearance: none;
+}
+.textInput:active{
+    outline: none;
+    appearance: none;
+}
+.inputLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    padding: 0.25rem;
+}
+
+.textInput:focus,
+.selectInput:focus {
+    border: 1px solid var(--cor-padrao); 
+    outline: none;
+}
+.whiteSpace{
+    white-space: nowrap;
+}
+
+.verDetalhesButton {
+  appearance: none;
+  border: 1px solid var(--cor-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: transparent;
+  color: var(--cor-padrao);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.verDetalhesButton:hover {
+  background-color: var(--cor-padrao);
+  color: #ffffff;
+}

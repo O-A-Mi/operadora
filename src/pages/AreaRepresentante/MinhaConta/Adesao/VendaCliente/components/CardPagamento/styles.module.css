@@ -1,0 +1,272 @@
+.cardContainer {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 0.9375rem 1.25rem;
+  color: var(--text-color);
+  border: 0.0625rem solid rgb(193 193 193);
+  position: fixed;
+  top: 7rem;
+  right: 3rem;
+  overflow: visible;
+  transition: all 0.3s ease;
+  min-height: 500px;
+  width: 330px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 0.9375rem;
+}
+
+.headerInfo {
+  margin-bottom: 0.625rem;
+}
+
+.numeroAtendimento {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.3125rem 0;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.numeroAtendimentoValue {
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: block;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.protocoloInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.protocoloLabel {
+  font-size: 0.875rem;
+  color: #333;
+  margin-bottom: 0.125rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.protocoloValue {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.cardDivider {
+  height: 0.0625rem;
+  background-color: var(--cinza-claro);
+  margin: 0.625rem 0 0.9375rem 0;
+  opacity: 0.5;
+}
+
+.cardBody {
+  position: relative;
+  padding-bottom: 0.3125rem;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.125rem 0;
+}
+
+.infoRow.statusRow {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.protocoloContainer.protocoloRow {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.value {
+  font-size: 0.875rem;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+  word-wrap: break-word;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.valorRow {
+  margin: 0.9375rem 0;
+  text-align: center;
+}
+
+.valor {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #333;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cardNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+
+.navButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bffed;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  overflow: hidden;
+  transition: width 0.3s ease, padding 0.3s ease;
+  width: 40px;
+}
+
+.navButton i {
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.expanded {
+  width: 9rem;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.buttonText {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  width: 0;
+  overflow: hidden;
+}
+
+.expanded .buttonText {
+  opacity: 1;
+  width: auto;
+}
+
+.retornarButton {
+  margin-right: auto;
+}
+
+.avancarButton {
+  margin-left: auto;
+}
+
+.cardFooter{
+  border-top: 1px solid var(--cinza-claro);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardFooter .infoButton {
+  font-weight: 500;
+  width: 120px;
+  background-color: transparent;
+  color: var(--cor-padrao);
+  padding: 6px;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--cor-padrao);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.infoButton:hover {
+  background-color: var(--cor-padrao);
+  color: var(--branco);
+}
+
+
+@media (max-width: 1029px) {
+  .cardContainer {
+    position: static;
+    max-width: 100%;
+    margin: 0;
+    top: auto;
+    right: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .cardHeader {
+    margin-bottom: 0.75rem;
+  }
+
+  .numeroAtendimento {
+    font-size: 0.85rem;
+  }
+
+  .numeroAtendimentoValue {
+    font-size: 0.875rem;
+  }
+
+  .protocoloLabel {
+    font-size: 0.75rem;
+  }
+
+  .protocoloValue {
+    font-size: 0.85rem;
+  }
+
+  .infoRow {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .value {
+    font-size: 0.8rem;
+    max-width: 60%;
+    text-align: right;
+  }
+
+  .valor {
+    font-size: 0.875rem;
+  }
+
+  .cardNavigation {
+    display: none;
+  }
+}

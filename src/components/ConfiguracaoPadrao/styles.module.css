@@ -1,0 +1,105 @@
+.filtroTabelaField {
+  margin-bottom: 2.5rem;
+}
+
+.filtroTabelaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.filtroTabelaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filtroTabelaTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtroTabelaButton {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: var(--red-600);
+  color: #f6f6f6;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.filtroTabelaButton:hover {
+  background-color: var(--red-800);
+  color: #fff;
+}
+
+.filtroTabelaBody {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  position: unset;
+  padding-bottom: 2rem;
+  flex-direction: column;
+}
+
+.TabelaField {
+  position: relative;
+  padding: 1.5rem;
+  background: var(--branco);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .filtroTabelaButton {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .filtroTabelaBody{
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  .filtroTabelaBody{
+    position: absolute;
+    width: 60%;
+  }
+}

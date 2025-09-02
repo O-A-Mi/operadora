@@ -1,0 +1,241 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: var(--text-primary);
+  margin-top: 20px;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+}
+
+.HeaderCamp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.ToggleResp {
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+
+.fullWidth {
+  margin-bottom: 1.5rem;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.responseButtons {
+  display: flex; 
+  margin-bottom: 1rem; 
+}
+
+.responseButtons:active {
+  color: var(--cinza-padrao);
+}
+
+.numberInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid #4b5563;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.numberInput button {
+  background-color: #374151;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.numberInput input {
+  width: 50px;
+  padding: 0.5rem;
+  text-align: center;
+  border: none;
+  background-color: white;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.BtnComboAdd {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.BtnComboExd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.InpNumber {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ordemVisualizacao {
+  display: flex;
+  flex-direction: column;
+}
+
+.Combo {
+  margin-bottom: 0.7rem;
+  position: relative;
+  top: 0.3rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cinza-escuro);
+}
+
+
+
+.numberInput input::-webkit-outer-spin-button,
+.numberInput input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.limitarCombosContainer {
+  margin-bottom: 1rem;
+}
+
+.limitarCombosContainer .Combo {
+  display: flex;
+  font-weight: 600;
+  padding-bottom: 0.85rem;
+  font-size: 1rem;
+  color: var(--cinza-padrao);
+}
+
+.combos {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.65rem;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 8px;
+  background-color: white;
+  gap: 0.5rem;
+}
+
+.comboTag {
+  color: var(--cinza-padrao);
+  border-radius: 4px;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 0.5rem;
+  background: var(--green-500);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+
+.comboTag:hover {
+  background-color: var(--green-700);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comboTag button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.fullWidth textarea {
+  min-height: 100px;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: var(--text-primary);
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.fullWidth .Combo {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.actionButtonsGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+}
+
+.actionButtonGravar {
+  background-color: #16a34a;
+  color: #f9fafb;
+}
+
+.actionButtonGravar:hover {
+  background-color: #15803d;
+}
+
+.actionButtonVoltar {
+  background-color: #4b5563;
+  color: #f9fafb;
+}
+
+.actionButtonVoltar:hover {
+  background-color: #374151;
+}
+
+@media (min-width: 1024px) {
+   .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1240px) {
+   .gridContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

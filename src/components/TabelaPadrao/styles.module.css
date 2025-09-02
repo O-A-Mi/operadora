@@ -1,0 +1,541 @@
+.tabelaContainer {
+    width: 100%;
+    overflow: auto;
+    will-change: max-width;
+    transition: max-width 0.3s ease;
+}
+
+.tabelaBodyWithFooter.tabelaContainer::-webkit-scrollbar-thumb {
+  border-radius: 0;
+}
+
+.tabela {
+    table-layout: auto; 
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.tabelaHeader{
+    border: none
+}
+
+.tabelaHeaderRow {
+    display: table-row;
+    border: none
+}
+
+.tabelaHeaderCell {
+    padding: 1rem 2.5rem 1rem 1rem;
+    background: var(--cor-padrao);
+    border: 1px solid var(--cinza-claro);
+    color: var(--branco);
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.tabelaHeaderCell:not(:last-child) {
+    border-right: none;
+}
+
+.tabelaHeaderCell:first-child {
+    border-top-left-radius: 0.5rem;
+}
+
+.tabelaHeaderCell:last-child {
+    border-top-right-radius: 0.5rem;
+}
+
+.tabelaHeaderSubCell{
+    padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+    background: var(--cor-padrao);
+    border: 1px solid var(--cinza-claro);
+    border-right: none;
+    border-top: none;
+    color: var(--branco);
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+    border-radius: 0;
+}
+
+.sortButton {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--branco);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tabelaBody {
+    display: table-row-group;
+    border: none
+}
+
+.tabelaBodyRow {
+    display: table-row;
+    border: none;
+    position: relative;
+}
+
+.tabelaBodyRowBackground {
+  opacity: 0.1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.tabelaBodyRow:nth-child(odd) {
+    background-color: var(--gray-100);
+}
+
+.tabelaBodyRow:hover {
+    background-color: var(--gray-150);
+}
+
+.tabelaBodyRow:hover .tabelaBodyCellSelected {
+    background-color: var(--gray-150);
+}
+
+.tabelaBodyCell {
+    padding: 1rem;
+    border-left: 1px solid var(--cinza-claro);
+    border-right: 1px solid var(--cinza-claro);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabelaBodyCell:not(:last-child) {
+    border-right: none;
+}
+
+.tabelaBodyRow:last-child .tabelaBodyCell {
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.tabelaBodyRow:last-child .tabelaBodyCell:first-child {
+    border-bottom-left-radius: 0.5rem;
+}
+
+.tabelaBodyRow:last-child .tabelaBodyCell:last-child {
+    border-bottom-right-radius: 0.5rem;
+}
+
+.tabelaBodyWithFooter .tabelaBodyRow:last-child .tabelaBodyCell:first-child {
+    border-radius: 0;
+}
+
+.tabelaBodyWithFooter .tabelaBodyRow:last-child .tabelaBodyCell:last-child {
+    border-radius: 0;
+}
+
+.tabelaBodyCellSelected{
+    background-color: var(--gray-200);
+}
+
+.tabelaToolbarContainer {
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.tabelaToolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tabelaToolbarButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: var(--cinza-padrao);
+    border: 1px solid var(--cinza-claro);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabelaToolbarButton:hover {
+    color: var(--cor-padrao);
+    border-color: var(--cor-padrao);
+    z-index: 1;
+}
+
+.tabelaToolbarButton:only-child {
+    border-radius: 0.5rem;
+}
+
+.tabelaToolbarButton:not(:only-child):first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.tabelaToolbarButton:not(:only-child):last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.tabelaToolbarButton:not(:first-child) {
+    margin-left: -1px;
+}
+
+.tabelaToolbarButton:focus,
+.tabelaToolbarButton:focus-visible,
+.tabelaToolbarButton:focus-within{
+    outline: none;
+}
+
+.tabelaToolbarButtonActive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    color: var(--cinza-padrao);
+    border: 1px solid var(--cinza-claro);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabelaToolbarButtonActive:only-child {
+    border-radius: 0.5rem;
+}
+
+.tabelaToolbarButtonActive:not(:only-child):first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.tabelaToolbarButtonActive:not(:only-child):last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.tabelaToolbarButtonActive:not(:first-child) {
+    margin-left: -1px;
+}
+
+.tabelaToolbarMenu{
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.tabelaToolbarMenuBody{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.35rem;
+    cursor: default;
+}
+
+.tabelaToolbarMenuButton{
+    display: flex;
+    align-items: center;
+    padding: 0.35rem;
+    color: var(--cinza-padrao);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    gap: 0.5rem;
+}
+
+.tabelaToolbarMenuButton:hover{
+    color: var(--cor-padrao);
+    background: var(--neutral-100);
+}
+
+.tabelaToolbarMenuButtonActive{
+    display: flex;
+    align-items: center;
+    padding: 0.35rem;
+    color: var(--cor-padrao);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    gap: 0.5rem;
+}
+
+.listViewContainer {
+    border: 1px solid var(--cinza-claro);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.listItem {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cinza-claro);
+    transition: background-color 0.3s ease;
+}
+
+.listItem:last-child {
+    border-bottom: none;
+}
+
+.listItem:hover {
+    background-color: #f9f9f9;
+}
+
+.listRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.listRow:last-child {
+    margin-bottom: 0;
+}
+
+.listColumnName {
+    font-weight: 600;
+    color: var(--cinza-padrao);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.listColumnValue {
+    word-break: break-word;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    font-size: 0.9rem;
+}
+
+.tabelaFooterContainer {
+    background-color: var(--cinza-claro-2);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    left: 0;
+}
+
+.tabelaFooterEmpty {
+    width: 100%;
+    text-align: center;
+    color: var(--cinza-padrao);
+    font-weight: 500;
+}
+
+.tabelaFooterCell {
+    flex: 1 1 auto;
+    padding: 0.75rem;
+    color: var(--cinza-padrao);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+    border: 1px solid var(--cinza-claro);
+}
+
+.removeBorderRight {
+    border-right: none !important;
+}
+
+.removeBorderBottom {
+    border-bottom: none !important;
+}
+
+.borderRadiusBottomRight {
+    border-bottom-right-radius: 0.5rem;
+}
+
+.borderRadiusBottomLeft{
+    border-bottom-left-radius: 0.5rem;
+}
+
+.tabelaFooterCellLabel {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+.tabelaFooterCellValue {
+    font-weight: 500;
+    color: var(--cinza-padrao);
+}
+
+.tabelaSelectionCell{
+    padding: 0;
+}
+
+.checkboxInput{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabelaSelection{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: auto;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 24%/24%;
+    transition: background 0.15s linear, box-shadow 0.15s linear;
+}
+
+.tabelaRowSelection{
+    box-shadow: inset 0 0 0 1.5px var(--cinza-claro);
+    background: transparent;
+}
+
+.tabelaRowSelection:checked {
+    box-shadow: inset 0px 0px 2px 1px var(--cor-padrao), inset 0 0 0px 3px var(--branco);
+    background: var(--cor-padrao);
+}
+
+.tabelaColumnSelection{
+    box-shadow: inset 0 0 0 1.5px var(--cinza-claro);
+    background: transparent;
+}
+
+.tabelaColumnSelection:checked {
+    box-shadow: inset 0px 0px 2px 1px var(--cor-medio), inset 0 0 0px 3px var(--cor-padrao);
+    background: var(--cor-medio);
+}
+
+.partialCheckboxIcon{
+    position: absolute;
+    color: var(--cor-padrao);
+    user-select: none;
+    pointer-events: none;
+}
+  
+@-webkit-keyframes check {
+    100% {
+        stroke-dashoffset: 4.5px;
+    }
+}
+  
+@keyframes check {
+    100% {
+        stroke-dashoffset: 4.5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .listRow {
+        grid-template-columns: 1fr;
+    }
+    
+    .listColumnName {
+        text-align: left;
+        margin-bottom: 0.25rem;
+    }
+}
+
+.columnSelector {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.columnSelectorHeader {
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    cursor: default;
+    font-size: 0.85rem;
+}
+
+.columnSelectorList {
+    padding: 5px 0;
+}
+
+.columnSelectorItem {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.columnSelectorItem:hover {
+    background-color: #f0f0f0;
+}
+
+.columnSelectorItem input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.columnSelectorItem span {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+}
+
+.columnSelectorActions{
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    padding-bottom: 5px;
+}
+
+.columnSelectorActions span{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.columnSelectorActions span:hover{
+    background-color: #f0f0f0;
+}
+
+.tabelaHeaderCellTypeSelect{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}

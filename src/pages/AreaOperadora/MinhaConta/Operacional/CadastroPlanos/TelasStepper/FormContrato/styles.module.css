@@ -1,0 +1,167 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formSectionWithBorder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--cinza-claro);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+
+.sectionTitle i {
+  font-size: 0.9rem;
+}
+
+.firstTitle {
+  margin-top: 0;
+}
+
+.communicationTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.communicationTitle i {
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.communicationSection {
+  margin-bottom: 1.5rem;
+}
+
+.communicationRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.communicationColumn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.columnLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.inputWithButton {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.visualizarButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2.5rem;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+}
+
+.visualizarButton:hover {
+  background: #2563eb;
+}
+
+.visualizarButton i {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .communicationTitle {
+    font-size: 1.1rem;
+  }
+
+  .communicationRow {
+    gap: 1.5rem;
+  }
+
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .communicationTitle {
+    font-size: 1.2rem;
+  }
+
+  .communicationRow {
+    gap: 2rem;
+  }
+
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .communicationTitle {
+    font-size: 1.2rem;
+  }
+
+  .communicationRow {
+    gap: 2.5rem;
+  }
+
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}

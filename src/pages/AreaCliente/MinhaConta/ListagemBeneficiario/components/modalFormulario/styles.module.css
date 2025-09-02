@@ -1,0 +1,131 @@
+.DivContainer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--cor-claro);
+    z-index: 4;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2.25rem;
+    flex: 1;
+    overflow-y: scroll;
+    background-color: var(--branco);
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-padrao);
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modalCloseButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--cor-padrao);
+}
+
+.botaoPesquisar,
+.botaoImprimir {
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--cor-padrao);
+    border-radius: 0.5rem;
+    align-items: center;
+    border: none;
+    gap: 0.5rem;
+}
+
+.botaoImprimir {
+    background-color: var(--cor-padrao);
+}
+
+.InputGroupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+
+@media (min-width: 768px) {
+
+    .DivContainer {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        border-radius: 1rem;
+        background: var(--cor-claro);
+        z-index: 4;
+        width: 55%;
+    }
+
+    .modalContent {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 2.25rem;
+        flex: 1;
+        overflow-y: scroll;
+        background-color: var(--branco);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .DivContainer {
+
+        width: 30%;
+    }
+
+    .modalContent {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 2.25rem;
+        overflow-y: scroll;
+        background-color: var(--branco);
+    }
+}

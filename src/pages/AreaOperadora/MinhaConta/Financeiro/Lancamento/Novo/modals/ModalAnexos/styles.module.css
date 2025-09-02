@@ -1,0 +1,446 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.modalContent {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  max-width: 90vw;
+  width: calc(100% - 2rem);
+  max-height: 90vh;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 0;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.modalHeader:last-child {
+  border-bottom: none;
+}
+
+
+
+.modalHeaderLeft {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.modalHeaderLeft i {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.modalTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modalCloseButton {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 16px;
+  text-align: center;
+}
+
+
+
+.modalBody {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-primary);
+}
+
+.subsectionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subsectionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.subsectionButton:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subsectionButton.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subsectionButton i:first-child {
+  font-size: 0.8rem;
+}
+
+.subsectionContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subsectionTitleContainer {
+  margin-bottom: 0.5rem;
+}
+
+.subsectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.Title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 1rem 0 1rem 0;
+}
+
+.subsectionPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+
+.actionButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.selectButton,
+.uploadButton {
+  flex: 1;
+  width: 50%;
+  height: 45px;
+  min-height: 45px;
+  max-height: 45px;
+}
+
+.downloadButton {
+  width: 100%;
+  height: 45px;
+  min-height: 45px;
+  max-height: 45px;
+}
+
+.selectButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.selectButton:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.uploadButton:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.downloadSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.downloadDescription {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.downloadButton:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalFooter {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-primary);
+
+  justify-content: flex-end;
+}
+
+.modalButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.modalButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButton i {
+  font-size: 0.8rem;
+}
+
+.modalButtonGerar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.modalButtonGerar:hover {
+  background: #218838;
+  border-color: #1e7e34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonGerar i {
+  font-size: 0.8rem;
+}
+
+.modalButtonFechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: white;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.modalButtonFechar:hover {
+  background: #5a6268;
+  border-color: #545b62;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonFechar i {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    max-width: 80vw;
+  }
+  
+  .modalTitle {
+    font-size: 0.9rem;
+  }
+  
+  .modalButton,
+  .modalButtonGerar,
+  .modalButtonFechar {
+    font-size: 0.85rem;
+  }
+
+  .subsectionButtons {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .subsectionButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .subsectionButton i:first-child {
+    font-size: 0.85rem;
+  }
+
+  .subsectionTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 70vw;
+  }
+  
+  .modalTitle {
+    font-size: 1rem;
+  }
+
+  .subsectionButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .subsectionButton i:first-child {
+    font-size: 0.9rem;
+  }
+
+  .subsectionTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .modalContent {
+    max-width: 60vw;
+  }
+
+  .subsectionButton {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .subsectionButton i:first-child {
+    font-size: 1rem;
+  }
+
+  .subsectionTitle {
+    font-size: 1.4rem;
+  }
+} 

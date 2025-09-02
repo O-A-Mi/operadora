@@ -1,0 +1,67 @@
+/* Estilos base */
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.not-found-icon {
+    font-size: 5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 1rem;
+}
+
+.not-found-title {
+    font-size: 2rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 1.5rem;
+}
+
+.not-found-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid var(--cinza-escuro);
+    color: var(--cinza-escuro);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.not-found-button:hover {
+    background-color: var(--cinza-escuro);
+    color: white;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .not-found-icon {
+        font-size: 4rem;
+    }
+
+    .not-found-title {
+        font-size: 1.5rem;
+    }
+
+    .not-found-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found-icon {
+        font-size: 3rem;
+    }
+
+    .not-found-title {
+        font-size: 1.25rem;
+    }
+
+    .not-found-button {
+        font-size: 0.8rem;
+    }
+}

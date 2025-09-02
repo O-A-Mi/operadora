@@ -1,0 +1,130 @@
+.DivContainer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--cor-claro);
+    z-index: 4;
+    min-width: 90%;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2.25rem;
+    min-height: calc(100vh - var(--header-height) - 2rem);
+    flex: 1;
+    overflow-y: scroll;
+    background-color: var(--branco);
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-padrao);
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modalCloseButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--cor-padrao);
+}
+
+.modalPasswordDescription {
+    color: var(--cor-padrao);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.modalSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.divInputs {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    width: 30%;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    flex-direction: column;
+}
+
+.inputLabel {
+    color: var(--cinza-padrao);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.25rem;
+}
+
+.inputGroupField {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.inputGroupField .textInput {
+    width: 100%;
+}
+
+
+
+@media (min-width: 768px) {
+    .DivContainer {
+        width: auto;
+        height: auto;
+        min-width: 32rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .modalContent {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 2.25rem;
+        min-height: calc(100vh - var(--header-height) - 2rem);
+        flex: 1;
+        overflow-y: scroll;
+        background-color: var(--branco);
+    }
+}

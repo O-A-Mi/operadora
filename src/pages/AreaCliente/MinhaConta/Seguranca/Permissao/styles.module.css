@@ -1,0 +1,84 @@
+.InputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.titulo {
+    font-size: 21px;
+}
+
+.Option {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-size: 12px;
+}
+
+.textAreaPermissao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+
+@media (min-width: 768px) {
+    .divContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .Option {
+        margin-right: 2rem;
+        width: 100%;
+    }
+
+    .InputContainer {
+        flex-direction: column;
+    }
+
+    .InputContainerSeguranca {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .divContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .Option {
+        width: 100%;
+
+    }
+
+    .InputContainer {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .InputContainerSeguranca {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .areaPesquisa {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .pesquisarOption {
+        width: 50%;
+        gap: 0;
+    }
+
+    .textAreaSeguranca {
+        margin: 1rem;
+        gap: 0;
+    }
+}

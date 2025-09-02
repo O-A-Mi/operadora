@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nome": "João Silva", "tipo": "Titular", "valor": 150.00 },
+  { "id": 2, "nome": "Maria Santos", "tipo": "Dependente", "valor": 75.00 },
+  { "id": 3, "nome": "Pedro Oliveira", "tipo": "Titular", "valor": 200.00 },
+  { "id": 4, "nome": "Ana Costa", "tipo": "Dependente", "valor": 100.00 },
+  { "id": 5, "nome": "Carlos Ferreira", "tipo": "Titular", "valor": 180.00 }
+] 

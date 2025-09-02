@@ -1,0 +1,245 @@
+.actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-items: center;
+    border-top: 1px solid var(--cinza-claro);
+    padding-top: 1rem;
+  }
+  
+  .actionButtonsGroup {
+    display: contents;
+  }
+  
+  .actionButtonsGroup:first-child {
+    justify-content: flex-start;
+  }
+  
+  .actionButtonsGroup:first-child .actionButton:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .actionButtonsGroup:first-child .actionButton:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .actionButtonsGroup:first-child .actionButton:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .actionButtonsGroup:first-child .actionButton:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .actionButtonsGroup:last-child .actionButton:nth-child(1) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .actionButtonsGroup:last-child .actionButton:nth-child(2) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  .actionButtonsGroup:last-child .navegadorContainer {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .actionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    width: 7rem;
+    height: 2rem;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-color) !important;
+  }
+  
+  .actionButton.active,
+  .actionButton:active {
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actionButton i {
+    font-size: 0.8rem;
+  }
+  
+  /* Navegador dropdown */
+  .navegadorContainer {
+    position: relative;
+  }
+  
+  .navegadorDropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cor-claro);
+    border: 1px solid var(--border-primary);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    margin-bottom: 0.5rem;
+  }
+  
+  .navegadorOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid var(--border-secondary);
+    color: var(--text-primary);
+    background: transparent;
+    font-size: 0.8rem;
+  }
+  
+  .navegadorOption:last-child {
+    border-bottom: none;
+  }
+  
+  .navegadorOption:hover {
+    background: var(--primary-color);
+    color: white;
+    transition: all 0.2s ease;
+  }
+  
+  .navegadorOption.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  .navegadorOption i {
+    font-size: 0.7rem;
+    width: 16px;
+    text-align: center;
+  }
+  
+  .actionButtonNavegador {
+    background: #7c3aed;
+    color: white;
+  }
+  
+  .actionButtonNavegador:hover {
+    background: #6d28d9;
+  }
+  
+  /* Media queries */
+  @media (min-width: 420px) {
+    .actionButtons {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  
+    .actionButtonsGroup:first-child .actionButton:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  
+    .actionButtonsGroup:first-child .actionButton:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  
+    .actionButtonsGroup:first-child .actionButton:nth-child(3) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  
+    .actionButtonsGroup:first-child .actionButton:nth-child(4) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    .actionButtonsGroup:last-child .actionButton:nth-child(1) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+  
+    .actionButtonsGroup:last-child .actionButton:nth-child(2) {
+      grid-column: 3;
+      grid-row: 2;
+    }
+  
+    .actionButtonsGroup:last-child .navegadorContainer {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .actionButtons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  
+    .actionButtonsGroup {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75rem;
+    }
+  
+    .actionButtonsGroup:first-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  
+    .actionButton {
+      padding: 0.65rem 1rem;
+      font-size: 0.85rem;
+      width: 7rem;
+      height: 2rem;
+      justify-content: center;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .actionButton {
+      font-size: 0.85rem;
+      width: 7rem;
+      height: 2rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .actionButton {
+      width: 7rem;
+      height: 2rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .navegadorDropdown {
+      bottom: 100%;
+      left: auto;
+      right: 0;
+      min-width: 250px;
+    }
+  }

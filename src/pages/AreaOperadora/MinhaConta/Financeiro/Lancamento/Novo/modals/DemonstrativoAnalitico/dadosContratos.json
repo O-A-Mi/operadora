@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nome": "Contrato A", "tipo": "Titular", "valor": 150.00 },
+  { "id": 2, "nome": "Contrato B", "tipo": "Dependente", "valor": 75.00 },
+  { "id": 3, "nome": "Contrato C", "tipo": "Titular", "valor": 200.00 },
+  { "id": 4, "nome": "Contrato D", "tipo": "Dependente", "valor": 100.00 },
+  { "id": 5, "nome": "Contrato E", "tipo": "Titular", "valor": 180.00 }
+] 

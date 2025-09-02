@@ -1,0 +1,403 @@
+.validarTokenContainer,
+.validarTokenContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.validarTokenContent{
+    gap: 1rem;
+}
+
+.validarTokenTitleTela{
+    color: var(--cor-padrao);
+    margin: 0;
+}
+
+.validarTokenDescriptionTela{
+    color: var(--cinza-padrao);
+    font-size: 0.95rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.buscarTokenField{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.buscarTokenAction{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.buscarTokenButton{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    color: var(--cinza-padrao);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    flex: 1;
+}
+
+.buscarTokenButton.active{
+    border: 1px solid var(--cor-padrao);
+    color: var(--cor-padrao);
+}
+
+.buscarToken{
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.buscarTokenContent{
+    gap: 3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.validarTokenSVG{
+    display: none;
+}
+
+.buscarTokenInputField{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.buscarTokenSubmit{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 2.5rem;
+    color: var(--branco);
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--cor-padrao);
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 0.75rem;
+}
+
+.filtroTabelaField{
+    background: var(--branco);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.filtroTabelaContent{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.filtroTabelaHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtroTabelaTitle{
+    margin: 0;
+    color: var(--cinza-padrao);
+    display: flex;
+    align-items: center;
+}
+
+.filtroTabelaButton{
+    appearance: none;
+    border: 1px solid var(--cor-padrao);
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: transparent;
+    color: var(--cor-padrao);
+    cursor: pointer;
+}
+
+.filtroTabelaBody{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+  
+.inputLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    padding: 0.25rem;
+}
+  
+.required {
+    color: var(--erro);
+}
+
+.textInput,
+.selectInput {
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    text-transform: uppercase;
+    flex: 1;
+
+    transition: border 0.2s ease-in-out;
+}
+
+.textDefault,
+.textInput::placeholder,
+.selectInput::placeholder {
+    text-transform: none;
+}
+
+.textInput:focus,
+.selectInput:focus {
+    border: 1px solid var(--cor-padrao); 
+    outline: none;
+}
+
+.selectInputField{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.selectInput{
+    width: 100%;
+    height: 100%;
+}
+
+.rowInputs{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.selectInputField i{
+    position: absolute;
+    right: .75rem;
+    color: var(--cinza-padrao);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Tabela */
+
+.tabelaPaciente {
+    display: flex;
+    gap: 0.5rem;
+}
+  
+.avatar {
+    border-radius: 24px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+}
+  
+.avatar img{
+    min-width: 100%;
+    border-radius: 20px;
+}
+  
+.pacienteInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+  
+.pacienteName {
+    color: var(--cinza-padrao);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.pacienteCNPJ {
+    color: var(--cinza-padrao);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tabelaToken{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tabelaTokenInput{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tabelaTokenInput i{
+    position: absolute;
+    right: .75rem;
+    color: var(--cinza-claro);
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabelaTokenInput input {
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    flex: 1;
+    text-transform: uppercase;
+    transition: border 0.2s ease-in-out;
+}
+
+.tabelaTokenInput input:focus {
+    border: 1px solid var(--cor-padrao); 
+    outline: none;
+}
+
+.tabelaTokenButton{
+    appearance: none;
+    background-color: var(--cinza-claro);
+    border-radius: 0.5rem;
+    color: var(--branco);
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    flex: 1;
+    cursor: pointer;
+    border: none;
+}
+.tabelaTokenButtonReagendar{
+    appearance: none;
+    background-color: var(--cor-padrao);
+    border-radius: 0.5rem;
+    color: var(--branco);
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    flex: 1;
+    cursor: pointer;
+    border: none;
+}
+
+.tabelaTokenButton.allowed{
+    background-color: var(--cor-padrao);
+}
+
+.tabelaStatusField{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tabelaStatus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    color: var(--cor-dinamica);
+    border: 1px solid var(--cor-dinamica);
+}
+
+.tabelaStatusDate{
+    color: var(--cor-dinamica);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tabelaAtendimento{
+    display: flex;
+    gap: 0.75rem;
+}
+
+.tabelaAtendimentoField{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/*.tabelaAtendimentoField:last-child span{
+    min-width: 15rem;
+}*/
+
+.tabelaAtendimentoField span{
+    text-align: left;
+    color: var(--cinza-padrao);
+}
+
+@media (min-width: 585px) {
+    .validarTokenSVG{
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .validarTokenSVG{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .validarTokenSVG{
+        display: flex;
+    }
+
+    .buscarTokenAction{
+        width: auto;
+    }
+
+    .buscarTokenButton{
+        flex: unset;
+    }
+
+    .buscarToken{
+        width: auto;
+        min-width: 35rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+}

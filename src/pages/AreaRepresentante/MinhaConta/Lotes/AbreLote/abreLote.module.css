@@ -1,0 +1,305 @@
+.abreLoteContainer,
+.lotesContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.abreLoteHigh{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.lotesTitleTela{
+    color: var(--cor-padrao);
+    margin: 0;
+}
+.buttonContainer{
+    display: flex;
+    gap: 15px;
+}
+.buttonVoltar{
+    color: var(--cor-padrao);
+    font-size: 0.9rem;
+    padding: 9px 10px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 1s ease-in-out;
+}
+.buttonExportar{
+    background: transparent;
+    border: 1px solid var(--cor-padrao);
+    color: var(--cor-padrao);
+    font-size: 0.9rem;
+    padding: 9px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.ButtonBack{
+    width: 100%;
+}
+.lotesSection{
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    border-radius: 20px;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+.buscaLote{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.buscaLoteTitle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    color: var(--cinza-padrao);
+}
+.buttonFilter {
+    appearance: none;
+    border: 1px solid var(--cor-padrao);
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: transparent;
+    color: var(--cor-padrao);
+    cursor: pointer;
+}
+.animated{
+    animation: jello-vertical 0.9s both;
+}
+@keyframes jello-vertical {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(0.9, 1.15, 1);
+    }
+    40% {
+      transform: scale3d(1.15, 0.9, 1);
+    }
+    50% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    65% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+.buscaLoteInputs{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.buscaLoteInputsFinal{
+    display: flex;
+    justify-content: start;
+    gap: 38px;
+}
+.selectContainer{
+    position: relative;
+    display: inline-block;
+}
+.selectContainer i{
+   position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #555;
+}
+.buscaloteSelect{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+.buscaloteBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 1;
+    gap: 0.25rem;
+}
+.startLabel{
+    font-size: 15px;
+    color: var(--cinza-escuro);
+}
+.buttonStyle{
+    padding: 0rem 0.38rem;
+    height: 2rem;
+    border-radius: 6px;
+    border: 1px solid var(--cinza-claro);
+    font-size: 18px;
+    color: var(--cinza-padrao);
+    outline: none;
+    appearance: none;
+    flex: 1;
+}
+.highAlinhamento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.buscaLoteContainer{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0.9rem;
+}
+.buscaLote i{
+    color: var(--cor-padrao);
+    position: absolute;
+    right: 0.7rem;
+    pointer-events: none;
+    user-select: none;
+    font-size: 0.7rem;
+}
+.positionBox{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.filtroTabelaBody{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.filtroTabelaField{
+    background: var(--branco);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 929px;
+}
+.inputLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    padding: 0.25rem;
+}
+.selectInputField{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.selectInputField i{
+  position: absolute;
+  right: .75rem;
+  color: var(--cinza-escuro);
+  user-select: none;
+  pointer-events: none;
+}
+
+.textInput{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    flex: 1;
+    transition: border 0.2s ease-in-out;
+}
+.textInput:active{
+    outline: none;
+    appearance: none;
+}
+.textInput:focus,
+.selectInput:focus {
+    border: 1px solid var(--cor-padrao); 
+    outline: none;
+}
+.selectInput{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    text-transform: uppercase;
+    flex: 1;
+    transition: border 0.2s ease-in-out;
+}
+.selectInput{
+    height: 100%;
+}
+.linhaum {
+    display: flex;
+    gap: 1rem;
+}
+.linhadois{
+    display: flex;
+}
+.telaDocumento{
+    white-space: nowrap;
+}
+.whiteSpace{
+    white-space: nowrap;
+}
+
+.tabelaSituacao{
+    border: 1px solid green;
+    color: green;
+    padding: 0.6rem 1rem;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.pText{
+    color: var(--cinza-padrao);
+    font-size: 0.95rem;
+}
+
+.voltarButton {
+  appearance: none;
+  border: 1px solid var(--cor-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: transparent;
+  color: var(--cor-padrao);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.voltarButton:hover {
+  background-color: var(--cor-padrao);
+  color: #ffffff;
+}

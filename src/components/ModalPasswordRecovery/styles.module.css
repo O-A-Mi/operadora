@@ -1,0 +1,137 @@
+.modalPasswordRecoveryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+.modalPasswordRecovery{
+    display: flex;
+    flex-direction: column;
+    background: var(--branco);
+    border-radius: 1rem;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    max-width: 420px;
+}
+
+.modalPasswordHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-padrao);
+}
+
+.modalPasswordTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.modalCloseButton{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--cor-padrao);
+}
+
+.modalPasswordDescription{
+    color: var(--cor-padrao);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.modalPasswordForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.inputLabel {
+    color: var(--cinza-padrao);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.25rem;
+}
+
+.inputGroupField{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.inputGroupField .textInput{
+    width: 100%;
+}
+
+.textInput {
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    text-transform: lowercase;
+    
+    transition: border 0.2s ease-in-out;
+}
+
+.inputGroupField i {
+    color : var(--cinza-escuro);
+    height: 100%;
+    width: 2.75rem;
+    position: absolute;
+    right: 0;
+    user-select: none;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textInput:focus {
+    outline: none;
+    border: 1px solid var(--cor-padrao);
+}
+
+.modalPasswordButtonField{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalPasswordButton{
+    background: var(--degrade-padrao);
+    border: none;
+    border-radius: 10rem;
+    padding: 0.65rem 2rem;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modalPasswordInformative{
+    color: var(--cinza-padrao);
+    font-size: 1.05rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.5rem 0;
+}

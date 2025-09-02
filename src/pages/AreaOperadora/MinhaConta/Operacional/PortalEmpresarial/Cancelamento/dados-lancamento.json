@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "referencia": "23421354",
+    "cpfcnpj": "17582284328462",
+    "associado": "João Silva",
+    "pedido": "123456",
+    "cadastro": "123456",
+    "validacao": "123456",
+    "representante": "João Silva",
+    "status": "123456"
+  },
+  {
+    "id": 2,
+    "referencia": "123456",
+    "cpfcnpj": "30093316848723",
+    "associado": "Roberto Silva",
+    "pedido": "123456",
+    "cadastro": "123456",
+    "validacao": "123456",
+    "representante": "João Silva",
+    "status": "123456"
+  },
+  {
+    "id": 3,
+    "referencia": "083244",
+    "cpfcnpj": "12345678901234",
+    "associado": "Jilmar",
+    "pedido": "123456",
+    "cadastro": "123456",
+    "validacao": "123456",
+    "representante": "João Silva",
+    "status": "123456"
+  },
+  {
+    "id": 4,
+    "referencia": "56712344",
+    "cpfcnpj": "92127028434637",
+    "associado": "Ana Cleber",
+    "pedido": "123456",
+    "cadastro": "123456",
+    "validacao": "123456",
+    "representante": "João Silva",
+    "status": "123456"
+  }
+]

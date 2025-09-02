@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>	
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/index.html</location>
+	</error-page>
+<!--
+
+C?digo = 301 
+Resumo = Movido Permanentemente 
+Descri??o = Um novo URL permanente foi atribu?do ao recurso solicitado e qualquer refer?ncia futura a esse recurso 
+dever? usar o novo URL. 
+Voc? j? deve ter passado por esta situa??o. Clica em um determinado link, abre-se uma p?gina dizendo que aquele 
+site n?o se encontra mais no provedor e este pede que espere um pouco enquanto redireciona para o atual endere?o. 
+
+C?digo = 302 
+Resumo = Movido Temporariamente 
+Descri??o = O recurso solicitado reside temporariamente em um URL diferente. Como o redirecionamento ? alterado 
+algumas vezes, o cliente deve continuar apontando para a URL antiga nas pr?ximas solicita??es. 
+Mesma situa??o do c?digo acima, s? que a mudan?a ? moment?nea, existindo a possibilidade de retorno para o 
+endere?o original. 
+
+C?digo = 304 
+Resumo = N?o Modificado 
+Descri??o = Se o cliente tiver feito uma solicita??o (GET condicional) e o acesso for permitido, mas o documento 
+n?o tiver sido modificado desde a data e hora especificados no campo ?If-Modified-Since?, o servidor responder? com 
+este c?digo de status e n?o enviar? uma nova entidade ao cliente. Os campos de cabe?alho contidos na resposta 
+dever?o incluir somente informa??es relevantes aos gerenciadores de cache e que possam ter sido alteradas 
+independentemente da data especificada no campo ?Last-Modified?. Como exemplos de campos de cabe?alho 
+relevantes, podemos citar a Data, Servidor e Expira em. ? atrav?s deste c?digo que seu browser sabe se aquela 
+pagina que esta no cache de sua maquina, precisa ou n?o ser atualizada. 
+
+C?digo = 400 
+Resumo = Solicita??o inv?lida 
+Descri??o = A solicita??o(link/URL) n?o p?de ser entendida pelo servidor devido ? sintaxe estar incorreta. Como a 
+classe 4 trata dos erros dos clientes(n?s), com toda certeza voc? deve ter digitado algo errado no endere?o. 
+Corrija e tente novamente. 
+
+C?digo = 401 
+Resumo = N?o autorizado 
+Descri??o = A solicita??o requer uma autentica??o do usu?rio. Provavelmente voc? esta entrando em um site que 
+necessita de um login - nome de usu?rio e uma senha. Tipicamente, ? uma quest?o de permiss?o de arquivo 
+(comum em ambientes UNIX) e que n?o deveria acontecer num "site" que disponibiliza informa??es p?blicas. 
+
+C?digo = 403 
+Resumo = Proibido 
+Descri??o = O servidor entendeu a solicita??o, mas se recusa a realiz?-la por um motivo n?o especificado. 
+A autentica??o n?o resolver? o problema e a solicita??o n?o dever? ser repetida. Este c?digo de erro ? 
+geralmente usado quando o servidor n?o deseja divulgar exatamente porque a solicita??o foi recusada, ou 
+quando nenhuma outra resposta ? aplic?vel. Nos sites da Microsoft, se voc? for um usu?rio registrado, na maioria 
+das vezes poder? corrigir este problema acrescentando um S ao final do protocolo HTTP - resultando em HTTPS . 
+
+	C?digo = 404 
+	Resumo = N?o encontrado 
+	Descri??o = Not Found. A mais famosa e conhecida de todos! 
+					O servidor n?o encontrou nada que corresponda ? solicita??o e tamb?m n?o informa se a condi??o ? tempor?ria ou 
+					permanente. Na maioria das vezes quando estamos digitando um endere?o, trocamos a barra normal pela barra 
+					invertida, esquecemos o til, colocamos min?scula onde deveria ser mai?scula, ou simplesmente digitamos errado mesmo 
+					a URL. Mas pode ser erro tamb?m de quem administra o site. Acabou mudando o nome de algum arquivo e n?o atualizou 
+					as outras p?ginas, o computador onde se encontra a informa??o esta travado, ou ate o provedor pode estar 'down' - 
+					a? nem com reza... 
+
+	
+
+	C?digo = 500 
+	Resumo = Erro interno do servidor 
+	Descri??o = O servidor encontrou uma condi??o inesperada que o impediu de atender ? solicita??o. Algumas vezes, isto 
+					ocorre porque o servidor pode estar muito ocupado devido ao fluxo de informa??es ou quantidade de usu?rios sendo 
+					atendidos, ou porque a conex?o de seu provedor ate a solicita??o de destino, est? com problemas tempor?rio. Neste caso, 
+					espere um pouco e tente novamente.
+
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/index.jsp</location>
+	</error-page>  
+	
+
+	C?digo = 501 
+	Resumo = N?o implementado 
+	Descri??o = O servidor n?o suporta a funcionalidade requerida para efetuar ? solicita??o. Est? ? geralmente uma 
+					justificativa conveniente que os provedores d?o quando os servidores n?o reconhecem o m?todo de requisi??o e n?o s?o 
+					capazes de suportar alguns recursos. 
+
+	<error-page>
+		<error-code>501</error-code>
+		<location>/index.jsp</location>
+	</error-page>  
+	
+
+	C?digo = 502 
+	Resumo = Gateway inv?lido 
+	Descri??o = O servidor recebeu uma resposta inv?lida do gateway/proxy ou de outro servidor acessado ao tentar 
+					efetuar ? solicita??o. Neste caso, espere alguns minutos e tente novamente a solicita??o. 
+
+	<error-page>
+		<error-code>502</error-code>
+		<location>/index.jsp</location>
+	</error-page>  
+
+
+	C?digo = 503 
+	Resumo = Servi?o indispon?vel 
+	Descri??o = O servidor est? atualmente incapaz de efetuar a solicita??o devido a uma sobrecarga tempor?ria ou 
+					manuten??o do servidor. Devido a diversos fatores, esta ? uma condi??o que na maioria das vezes, ? resolvida depois 
+					de alguma atraso.
+
+	<error-page>
+		<error-code>503</error-code>
+		<location>/index.jsp</location>
+	</error-page>  
+	
+-->		
+</web-app>

@@ -1,0 +1,21 @@
+.containerCards{
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: var(--container-box-shadow);
+}
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+.navigationButton{
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    background: var(--cor-padrao);
+    border-radius: 0.2rem;
+    border: none;
+    cursor: pointer;
+}

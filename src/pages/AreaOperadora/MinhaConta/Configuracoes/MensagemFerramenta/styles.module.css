@@ -1,0 +1,161 @@
+  
+  .filtroTabelaContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+  }
+  
+  .filtroTabelaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filtroTabelaTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .subsectionButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filtroTabelaButton {
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.65rem 0rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.85rem;
+      line-height: unset;
+      background-color: var(--red-600);
+      color: #f6f6f6;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+      width: 7rem;
+      height: 2rem;
+      display: flex;
+      gap: 0.2rem;
+  }
+  
+  .filtroTabelaButton:hover {
+    background-color: var(--red-800);
+    color: #fff;
+  }
+  
+.filtroTabelaBody {
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+    position: absolute;
+    padding-bottom: 2rem;
+}
+
+.TabelaField {
+  position: relative;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.buttonPage{
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.25rem 0.25rem 0 0;
+  box-shadow: 0px 0px 0px 0px var(--cor-padrao);
+  background: var(--branco-moldura-50);
+  color: var(--cinza-padrao);
+  font-weight: 500;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  flex-basis: 10%;
+  transition: all 0.25s ease-in-out;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.buttonPage:hover{
+  color: var(--cor-padrao);
+}
+
+.buttonPage:focus,
+.buttonPage:focus-visible,
+.buttonPage:focus-within{
+  outline: none;
+}
+
+.buttonPage.active{
+    color: var(--cor-padrao);
+    box-shadow: 0px -2px 1px 0px var(--cor-padrao);
+    border-bottom: 1px solid var(--branco-moldura-50);
+}
+
+.tesourariaHeader {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.sectionButtons {
+  display: flex;
+  gap: 2rem;
+}
+
+.centerInputs {
+  position: relative;
+  width: 100%;
+}
+
+.rowInputs{
+  position: relative;
+  flex-direction: column;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.15rem;
+  }
+
+   .filtroTabelaButton {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 1.25rem;
+  }
+  .rowInputs{
+    position: absolute;
+    flex-direction: row;
+    top: 0.2rem;
+  }
+  
+  .centerInputs{
+      width: calc(100% - 300px);
+  }
+}

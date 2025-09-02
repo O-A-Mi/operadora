@@ -1,0 +1,203 @@
+.inputField{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+  
+.inputLabel {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cinza-padrao);
+    padding: 0.25rem;
+}
+  
+.required {
+    font-size: 12px;
+    color: var(--erro);
+}
+
+.inputPadraoContent{
+    display: flex;
+}
+
+.inputPadraoField{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+.inputPadraoField i{
+    position: absolute;
+    right: 1rem;
+    color: var(--cinza-padrao);
+    user-select: none;
+    pointer-events: none;
+}
+
+.iconsContainer{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.iconsContainer i{
+    position: relative;
+    right: unset;
+    color: var(--cinza-padrao);
+}
+
+.eyeIcon{
+    display: flex;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    user-select: all !important;
+}
+
+.fileActionIcon{
+    display: flex;
+    cursor: pointer !important;
+    pointer-events: all !important;
+    user-select: all !important;
+}
+
+.inputPadrao{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    height: 2.5rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    flex: 1;
+    cursor: text;
+
+    transition: border 0.2s ease-in-out;
+}
+
+.inputPadrao[type="file"]{
+    appearance: none;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    height: 2.5rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    flex: 1;
+    cursor: pointer;
+    transition: border 0.2s ease-in-out;
+    align-content: center;
+}
+
+.inputPadrao:-webkit-autofill,
+.inputPadrao:-webkit-autofill:hover, 
+.inputPadrao:-webkit-autofill:focus, 
+.inputPadrao:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--cinza-escuro);
+    background-color: var(--cinza-claro) !important;
+
+}
+
+.inputPadrao:focus,
+.inputPadrao:focus-visible,
+.inputPadrao:focus-within{
+    border: 1px solid var(--cor-padrao); 
+    outline: none;
+}
+
+.inputPadrao,
+.inputPadrao::placeholder {
+    text-transform: none;
+}
+
+.upperCase{
+    text-transform: uppercase;
+}
+
+.lowerCase{
+    text-transform: lowercase;
+}
+
+.readOnly{
+    pointer-events: none;
+}
+
+.disabled{
+    pointer-events: none;
+    background-color: var(--cinza-claro);
+}
+
+input[type="date" i] {
+    font-family: sans-serif;
+}
+
+.inputPadraoField input:disabled, .inputPadrao:disabled{
+    border-color: #dadbdd;
+    background-color: #fdfdff;
+    color: #99999b;
+}
+
+.inputPadraoField input:disabled + i,.inputPadrao:disabled + i{
+    color: #99999b;
+}
+
+textarea {
+    font-family: sans-serif;
+    resize: none;
+}
+
+.inputButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid var(--cinza-claro);
+    padding: 0 1rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    font-size: 0.85rem;
+    line-height: normal;
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    cursor: pointer;
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.inputButton:hover{
+    border: 1px solid var(--cor-padrao); 
+    color: var(--cor-padrao);
+    z-index: 1;
+}
+
+.inputButton:disabled{
+    border-color: #dadbdd;
+    background-color: #fdfdff;
+    color: #99999b;
+}
+
+.inputButton.firstButton{
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.inputButton.lastButton{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.inputButtonLeft{
+    margin-right: -1px;
+}
+
+.inputButtonRight{
+    margin-left: -1px;
+}

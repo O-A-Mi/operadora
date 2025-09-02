@@ -1,0 +1,367 @@
+.container {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-padrao);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--cinza-escuro);
+  line-height: 1.6;
+}
+
+.statusSection {
+  margin-top: 2rem;
+}
+
+.statusSection h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin-bottom: 1rem;
+}
+
+.currentStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--cinza-claro-2);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.currentStatus i {
+  font-size: 1.25rem;
+}
+
+.currentStatus span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--cor-padrao);
+}
+
+.statusOptions h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin-bottom: 1rem;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.statusCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background-color: var(--branco);
+  border: 2px solid var(--cinza-claro);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--cor-padrao);
+}
+
+.statusCard.active {
+  border-color: var(--cor-padrao);
+  background-color: var(--cinza-claro-2);
+  color: var(--cor-padrao);
+}
+
+.statusCard i {
+  font-size: 2rem;
+}
+
+.statusCard span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.statusIconAtivo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #3BA55D;
+  pointer-events: none; 
+}
+
+.statusIconAtivo i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.statusIconInativo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6B7280;
+  pointer-events: none;
+}
+
+.statusIconInativo i {
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.statusContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.statusButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--cor-padrao);
+  border: none;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  user-select: none;
+  outline: none;
+  position: relative;
+}
+
+.statusButton:hover {
+  background-color: var(--cinza-claro-2);
+}
+
+.statusButton:focus {
+  outline: 2px solid var(--cor-padrao);
+  outline-offset: 2px;
+}
+
+.statusButton:active {
+  background-color: var(--cinza-claro);
+}
+
+.statusMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1500;
+  min-width: 150px;
+}
+
+.statusOption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--cor-padrao);
+  transition: background-color 0.2s ease;
+}
+
+.statusOption.active {
+  background-color: var(--cinza-claro-2);
+  color: var(--cor-padrao);
+}
+
+.statusOption:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.statusOption:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.statusOption i {
+  font-size: 0.875rem;
+  width: 1rem;
+  text-align: center;
+}
+
+.optionsGrid {
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+}
+
+.statusCard {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.statusCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selectLabel {
+  color: var(--cor-padrao);
+  font-size: 0.95rem;
+}
+
+.statusSelectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.statusSelectIcon {
+  position: absolute;
+  left: 0.75rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid var(--branco);
+  pointer-events: none;
+}
+
+.statusSelectIconAtivo {
+  background-color: #3BA55D;
+}
+
+.statusSelectIconInativo {
+  background-color: #6B7280;
+}
+
+.statusSelect {
+  width: 100%;
+  appearance: none;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  font-size: 0.95rem;
+  background-color: var(--branco);
+  color: var(--cor-padrao);
+}
+
+.statusSelect:focus {
+  outline: none;
+  border: 1px solid var(--cor-padrao);
+}
+
+.customSelect {
+  position: relative;
+}
+
+.customSelectButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--branco);
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.85rem 0.65rem 0.85rem;
+  cursor: pointer;
+  color: var(--cor-padrao);
+  padding: 0.6rem 1rem 0.6rem 2rem;
+}
+
+.customSelectValue {
+  flex: 1;
+  text-align: left;
+}
+
+.customSelectChevron {
+  transition: transform 0.2s ease;
+}
+
+.customSelect[aria-expanded="true"] .customSelectChevron,
+.customSelectButton[aria-expanded="true"] .customSelectChevron {
+  transform: rotate(180deg);
+}
+
+.customSelectMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--branco);
+  border: 1px solid var(--cinza-claro);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  z-index: 20;
+  overflow: hidden;
+}
+
+.customSelectOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: transparent;
+  border: none;
+  color: var(--cor-padrao);
+  cursor: pointer;
+  padding: 0.6rem 0 0.6rem 2rem;
+}
+
+.customSelectOption:hover {
+  background: var(--cinza-claro-2);
+}
+
+.customSelectOption.active {
+  background: var(--cinza-claro-2);
+}
+
+/* Media queries para responsividade */
+@media (min-width: 768px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .statusMenu {
+    min-width: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .optionsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 3rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+} 

@@ -1,0 +1,504 @@
+.vendaClienteContainer {
+    width: 1350px;
+    /* max-width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--branco-moldura-50);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--container-box-shadow);
+    position: relative;
+    left: 3rem;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+   }
+
+.Header i {
+    color: var(--cor-padrao);
+}
+
+.HeaderCamp {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    color: var(--cinza-padrao);
+    margin-top: 1rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.vendaClienteContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    max-width: 80%;
+}
+
+.vendaClienteContentButton{
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+
+.vendaClienteContentEnd {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: end;
+}
+
+.vendaClienteContentBorder {
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 1rem;
+}
+
+.vendaClienteTitleTela {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vendaClienteDescriptionTela {
+    color: var(--cinza-padrao);
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+    text-wrap: nowrap;
+    align-content: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.vendaClienteDescriptionTela i {
+    color: var(--cor-padrao);
+}
+
+.ToggleContainer {
+    position: relative;
+    top: 0.5rem;
+}
+
+.infoButton {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--cor-padrao);
+    color: var(--branco);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    justify-content: center;
+    color: #fff;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.infoButton {
+    background: var(--cor-padrao);
+
+    font-weight: 600;
+}
+
+.infoTitle {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--cinza-padrao);
+}
+
+.infoSubTitle {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--cinza-padrao);
+}
+
+.infoText {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--cinza-padrao);
+}
+
+.attentionBox {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.attentionBox p {
+    margin: 0;
+    padding: 0.4rem 0rem;
+}
+
+.attentionBox strong {
+    color: #ff9800;
+}
+
+.importButton {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.85rem;
+    line-height: unset;
+    background-color: var(--azul-padrao);
+    color: var(--branco);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.confirmButton {
+    border: 1px solid var(--azul-padrao);
+    background-color: transparent;
+    color: var(--azul-padrao);
+}
+
+.closeButton{
+    background-color: transparent;
+    border: none;
+    color: var(--rose-600);
+    font-size: 1.75rem;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.closeButton:hover{
+    color: var(--rose-800);
+}
+
+.importarButton {
+    color: var(--cor-padrao);
+    background-color: transparent;
+    padding: 0.55rem 0.45rem;
+    gap: .85rem;
+    flex-grow: unset;
+    font-size: .75rem;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.planContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.planCellButtonCard{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    border: solid 1px var(--cor-padrao);
+    border-radius: 1rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.planCellButtonCard:hover{
+    color: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(150, 148, 149, 0.75);
+}
+
+.planCellButtonCard i{
+    font-size: 38px;
+    padding: 1.25rem;
+}
+
+.planCellButtonCard p{
+    font-size: 16px;
+}
+
+.planCellButtonLista{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-bottom: solid 1px var(--cinza-claro);
+    transition: all 0.25s ease-in-out;
+}
+
+.planCellButtonLista:hover{
+    background-color: var(--gray-200);
+    cursor: pointer;
+}
+
+.planCellButtonLista i{
+    font-size: 18px;
+    padding: 1rem;
+}
+
+.planCellButtonLista p{
+    font-size: 14px;
+}
+
+.planCellChildButtonLista{
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    padding: 1rem 0 1rem 2rem;
+    text-indent: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.planCellChildButtonLista:hover{
+    background: var(--gray-200);
+}
+
+.planRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.planCell{
+    width: 100%;
+    display: flex;
+}
+.planTable{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-300);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.planTableRow{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+}
+.planTableHeader{
+    background-color: var(--gray-200);
+    font-weight: 600;
+    border-bottom: 1px solid var(--gray-300);
+}
+.planTableCol{
+    flex-basis: calc(100% / 10);
+}
+
+
+@media (min-width: 768px) {
+    .vendaClienteContainer {
+        gap: 1.25rem;
+    }
+    
+    .vendaClienteTitleTela {
+        font-size: 1.15rem;
+    }
+    
+    .vendaClienteContent {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        max-width: 75%;
+    }
+
+    .vendaClienteContentBorder{
+        border-bottom: 1px solid var(--gray-200);
+        padding-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .infoButton{
+        background-color: var(--cor-padrao);
+        color: #fff;
+        padding: 0.55rem 0.45rem;
+        gap: 0.35rem;
+        flex-grow: unset;
+        font-size: 0.75rem;
+        transition: all 0.25s ease-in-out;
+        padding: 0.75rem 0.55rem;
+    }
+
+    .planContent{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .planCell{
+        width: 100%;
+        flex: 0 0 calc(50% - 1rem);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .vendaClienteContainer {
+        gap: 1.5rem;
+    }
+    
+    .vendaClienteTitleTela {
+        font-size: 1.25rem;
+    }
+
+    .infoButton {
+        background-color: var(--cor-padrao);
+        color: #fff;
+        padding: 0.75rem 0.45rem;
+        gap: 0.85rem;
+        flex-grow: unset;
+        font-size: 0.75rem;
+        transition: all 0.25s ease-in-out;
+        width: 100%;
+        align-items: end;
+    }
+
+    .planContentLista{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 1rem;
+        width: 100%;
+        border: 1px solid var(--cinza-claro);
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .planContentLista:last-child{
+        border-radius: 0.5rem;
+    }
+
+    .planContentCard{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .planCell{
+        width: 100%;
+        flex: 0 0 calc(33.333333% - 1rem);
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 1280px) {
+    .vendaClienteContainer {
+        gap: 2rem;
+    }
+    .infoButton{
+        padding: 0.85rem 0.45rem;
+    }
+}
+
+.pagamentoCard{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    box-shadow: 0px 0px 20px rgba(30,10,50,0.2);
+    border-radius: 1rem;
+    background: var(--cor-padrao);
+    text-wrap: nowrap;
+    min-width: 22vw;
+    overflow: hidden;
+}
+
+.pagamentoCardHeader{
+    color: var(--branco);
+    padding: 0.5rem 0px;
+}
+
+.pagamentoCardTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagamentoCardContent{
+    display: flex;
+    flex-direction: column;
+    background: var(--branco);
+    padding: 0.5rem;
+}
+
+.pagamentoCardContentItem{
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg,transparent 0%, var(--cor-padrao) 15%, var(--cor-padrao) 50%, var(--cor-padrao) 85%, transparent 100%);
+    border-image-slice: 1;
+    margin: 0px 1rem;
+    padding: 0.75rem 0px;
+}
+
+.pagamentoCardTextInfo{
+    font-style: italic;
+    font-size: 12px;
+}
+
+.pagamentoCardContentValue{
+    margin: 0px 1rem;
+    padding: 0.75rem 0px;
+    align-self: center;
+    font-size: 20px;
+}
+
+.pagamentoCardValueText{
+    color: var(--cor-padrao);
+}
+
+.pagamentoCardTextHighlight{
+    font-weight: 700;
+    background-image: var(--background-header);
+    background-clip: text;
+    color: transparent;
+    font-size: 26px;
+}

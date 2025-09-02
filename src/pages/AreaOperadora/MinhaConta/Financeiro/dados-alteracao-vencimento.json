@@ -1,0 +1,112 @@
+[
+  {
+    "proposta": "PROP001",
+    "cpfCnpj": "123.456.789-00",
+    "associado": "João Silva",
+    "diaVencimento": 15,
+    "valorParcela": 150.00,
+    "representante": "Carlos Santos",
+    "status": "Pendente",
+    "comboServicosProdutos": "Plano Saúde + Odonto"
+  },
+  {
+    "proposta": "PROP002",
+    "cpfCnpj": "987.654.321-00",
+    "associado": "Maria Oliveira",
+    "diaVencimento": 10,
+    "valorParcela": 200.00,
+    "representante": "Ana Costa",
+    "status": "Aprovado",
+    "comboServicosProdutos": "Plano Pet"
+  },
+  {
+    "proposta": "PROP003",
+    "cpfCnpj": "111.222.333-44",
+    "associado": "Pedro Santos",
+    "diaVencimento": 25,
+    "valorParcela": 180.00,
+    "representante": "Roberto Lima",
+    "status": "Em Análise",
+    "comboServicosProdutos": "Plano Odonto"
+  },
+  {
+    "proposta": "PROP004",
+    "cpfCnpj": "555.666.777-88",
+    "associado": "Fernanda Silva",
+    "diaVencimento": 5,
+    "valorParcela": 120.00,
+    "representante": "José Pereira",
+    "status": "Rejeitado",
+    "comboServicosProdutos": "Plano Saúde"
+  },
+  {
+    "proposta": "PROP005",
+    "cpfCnpj": "999.888.777-66",
+    "associado": "Lucas Mendes",
+    "diaVencimento": 20,
+    "valorParcela": 300.00,
+    "representante": "Mariana Costa",
+    "status": "Aprovado",
+    "comboServicosProdutos": "Plano Saúde + Pet"
+  },
+  {
+    "proposta": "PROP006",
+    "cpfCnpj": "444.333.222-11",
+    "associado": "Amanda Costa",
+    "diaVencimento": 12,
+    "valorParcela": 250.00,
+    "representante": "Ricardo Silva",
+    "status": "Pendente",
+    "comboServicosProdutos": "Plano Odonto + Pet"
+  },
+  {
+    "proposta": "PROP007",
+    "cpfCnpj": "777.888.999-00",
+    "associado": "Roberto Almeida",
+    "diaVencimento": 8,
+    "valorParcela": 175.00,
+    "representante": "Patrícia Lima",
+    "status": "Aprovado",
+    "comboServicosProdutos": "Plano Saúde"
+  },
+  {
+    "proposta": "PROP008",
+    "cpfCnpj": "222.333.444-55",
+    "associado": "Carla Mendes",
+    "diaVencimento": 30,
+    "valorParcela": 220.00,
+    "representante": "Fernando Santos",
+    "status": "Em Análise",
+    "comboServicosProdutos": "Plano Pet"
+  },
+  {
+    "proposta": "PROP009",
+    "cpfCnpj": "666.777.888-99",
+    "associado": "Diego Oliveira",
+    "diaVencimento": 18,
+    "valorParcela": 190.00,
+    "representante": "Juliana Costa",
+    "status": "Aprovado",
+    "comboServicosProdutos": "Plano Odonto"
+  },
+  {
+    "proposta": "PROP010",
+    "cpfCnpj": "111.222.333-44",
+    "associado": "Vanessa Silva",
+    "diaVencimento": 3,
+    "valorParcela": 280.00,
+    "representante": "Marcelo Pereira",
+    "status": "Pendente",
+    "comboServicosProdutos": "Plano Saúde + Odonto + Pet"
+  },
+  {
+    "proposta": "PROP011",
+    "cpfCnpj": "111.222.333-44",
+    "associado": "Vanessa Silva",
+    "diaVencimento": 3,
+    "valorParcela": 280.00,
+    "representante": "Marcelo Pereira",
+    "status": "Pendente",
+    "comboServicosProdutos": "Plano Saúde + Odonto + Pet"
+  }
+] 

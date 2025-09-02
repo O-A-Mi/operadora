@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "data": "22/07/2025 15:30:12",
+    "usuario": "ADMIN.SISTEMA - Administrador",
+    "motivo": "Fechamento mensal realizado"
+  },
+  {
+    "id": 2,
+    "data": "22/07/2025 14:45:33",
+    "usuario": "VITOR.TESTE - Vitor Teste",
+    "motivo": "Ajuste de valores"
+  },
+  {
+    "id": 3,
+    "data": "22/07/2025 13:20:45",
+    "usuario": "MARIA.SILVA - Maria Silva",
+    "motivo": "Correção de lançamentos"
+  }
+] 

@@ -1,0 +1,216 @@
+.MainContent {
+    font-family: 'montserrat', sans-serif;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.InputAlign {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 100%;
+    flex-direction: column;
+}
+  
+.Header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+   }
+
+.HeaderCamp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.Footer {
+    display: flex;
+    justify-content: flex-start;
+    border-top: 2px solid var(--cinza-claro);
+    margin-top: 1.5rem; 
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.CancelBTN {
+    background-color: var(--red-600);
+    border: none;
+    border-radius: 8px;
+    gap: 1rem;
+    cursor: pointer;
+    width: 7rem;
+    height: 2rem;
+    transition: background ease 0.2s;
+}
+
+.CancelBTN:hover {
+    background-color: var(--red-800);
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    color: var(--cinza-padrao);
+    position: relative;
+}
+  
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+
+.actionButtonsGroup {
+  display: contents;
+}
+
+.actionButtonsGroup:first-child {
+  justify-content: flex-start;
+}
+
+.actionButtonsGroup:first-child .actionButton:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.actionButtonsGroup:first-child .actionButton:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.actionButton.active,
+.actionButton:active {
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionButton i {
+  font-size: 0.8rem;
+}
+
+.actionButtonGravar {
+  background: #10b981;
+  color: white;
+}
+
+.actionButtonGravar:hover {
+  background: #059669;
+}
+
+.actionButtonVoltar {
+  background: #6b7280;
+  color: white;
+}
+
+.actionButtonVoltar:hover {
+  background: #4b5563;
+}
+
+.actionButton i {
+  font-size: 0.8rem;
+}
+
+.actionButtonNovo {
+  background: #3b82f6;
+  color: white;
+}
+.actionButtonRemover {
+  background: #ef4444;
+  color: white;
+}
+
+.actionButtonRemover:hover {
+  background: #dc2626;
+}
+
+
+@media (min-width: 768px) {
+  .Header {
+    font-size: 1.15rem;
+  }
+    .actionButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .actionButtonsGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .actionButtonsGroup:first-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .actionButton {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Header {
+    font-size: 1.25rem;
+  }
+    .actionButton {
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+  }
+  .InputAlign{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .actionButton {
+    width: 7rem;
+    height: 2rem;
+  }
+}

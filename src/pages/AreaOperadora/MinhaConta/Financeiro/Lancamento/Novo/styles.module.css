@@ -1,0 +1,787 @@
+.tesourariaContainer input[type="number"]::-webkit-outer-spin-button,
+.tesourariaContainer input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.tesourariaContainer input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.tesourariaContainer * input[type="number"]::-webkit-outer-spin-button,
+.tesourariaContainer * input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.tesourariaContainer * input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.tesourariaContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tesourariaTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin: 0;
+   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tesourariaTitle i {
+  font-size: 0.9rem;
+}
+
+.tesourariaHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subsectionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subsectionButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.subsectionButton:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subsectionButton.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subsectionButton i:first-child {
+  font-size: 0.8rem;
+}
+
+.subsectionContent {
+  flex: 1;
+  overflow: visible;
+}
+
+.subsectionScreen {
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.activeScreen {
+  display: block;
+  opacity: 1;
+}
+
+.hiddenScreen {
+  display: none;
+  opacity: 0;
+}
+
+.subsectionPanel.expanded {
+  max-height: 2000px;
+  opacity: 1;
+  transform: translateY(0);
+  width: 100%;
+}
+
+.subsectionPanel.collapsed {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.actionButtonsGroup {
+  display: contents;
+}
+
+.actionButtonsGroup:first-child {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.actionButtonsGroup:first-child .actionButton:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.actionButtonsGroup:first-child .actionButton:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.actionButtonsGroup:first-child .actionButton:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.actionButtonsGroup:last-child .actionButton:nth-child(1) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.actionButtonsGroup:last-child .actionButton:nth-child(2) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.actionButtonsGroup:last-child .navegadorContainer {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.navegadorContainer {
+  position: relative;
+}
+
+.navegadorDropdown {
+  position: absolute;
+  bottom: 100%;
+  left: -26px;
+  background: var(--cor-claro);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-bottom: 0.5rem;
+}
+
+.navegadorOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  background: transparent;
+  font-size: 0.8rem;
+}
+
+.navegadorOption:last-child {
+  border-bottom: none;
+}
+
+.navegadorOption:hover {
+  background: var(--primary-color);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.navegadorOption.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.navegadorOption i {
+  font-size: 0.7rem;
+  width: 16px;
+  text-align: center;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.actionButton.active,
+.actionButton:active {
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionButton i {
+  font-size: 0.8rem;
+}
+
+.actionButtonNovo {
+  background: #3b82f6;
+  color: white;
+}
+
+.actionButtonNovo:hover {
+  background: #2563eb;
+}
+
+.actionButtonGravar {
+  background: #10b981;
+  color: white;
+}
+
+.actionButtonGravar:hover {
+  background: #059669;
+}
+
+.actionButtonVoltar {
+  background: #6b7280;
+  color: white;
+}
+
+.actionButtonVoltar:hover {
+  background: #4b5563;
+}
+
+.actionButtonAnterior {
+  background: #dc2626;
+  color: white;
+}
+
+.actionButtonAnterior:hover {
+  background: #b91c1c;
+}
+
+.actionButtonProximo {
+  background: #059669;
+  color: white;
+}
+
+.actionButtonProximo:hover {
+  background: #047857;
+}
+
+.actionButtonNavegador {
+  background: #7c3aed;
+  color: white;
+}
+
+.actionButtonNavegador:hover {
+  background: #6d28d9;
+}
+
+@media (min-width: 420px) {
+  .actionButtons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .actionButtonsGroup:first-child .actionButton:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .actionButtonsGroup:first-child .actionButton:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .actionButtonsGroup:first-child .actionButton:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .actionButtonsGroup:last-child .actionButton:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .actionButtonsGroup:last-child .actionButton:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .actionButtonsGroup:last-child .navegadorContainer {
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .tesourariaContainer {
+    gap: 1rem;
+  }
+  
+  .tesourariaHeader {
+    gap: 1rem;
+  }
+  
+  .tesourariaTitle {
+    font-size: 1.15rem;
+  }
+  
+  .subsectionButtons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .subsectionButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    width: auto;
+    min-width: 140px;
+    justify-content: center;
+    background: transparent;
+    border: none;
+  }
+  
+  .subsectionButton i:first-child {
+    font-size: 0.85rem;
+  }
+
+  .actionButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .actionButtonsGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .actionButtonsGroup:first-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .navegadorDropdown {
+    bottom: 100%;
+    left: auto;
+    right: 0;
+    min-width: 250px;
+  }
+
+  .actionButton {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tesourariaContainer {
+    gap: 1.25rem;
+  }
+  
+  .tesourariaTitle {
+    font-size: 1.25rem;
+  }
+  
+  .subsectionButton {
+    font-size: 0.9rem;
+    min-width: 160px;
+    background: transparent;
+    border: none;
+  }
+  
+  .subsectionButton i:first-child {
+    font-size: 0.9rem;
+  }
+
+  .actionButton {
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tesourariaContainer {
+    gap: 1.5rem;
+  }
+  
+  .subsectionButton {
+    min-width: 180px;
+    background: transparent;
+    border: none;
+  }
+
+  .actionButton {
+    width: 7rem;
+    height: 2rem;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.modalContent {
+  background: var(--cor-claro);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  max-width: 500px;
+  width: calc(100% - 2rem);
+  max-height: 90vh;
+  margin-bottom: 0.5rem;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.modalHeader:last-child {
+  border-bottom: none;
+}
+
+.modalHeader:hover {
+  background: var(--bg-secondary);
+}
+
+.modalTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modalCloseButton {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 16px;
+  text-align: center;
+}
+
+.modalCloseButton:hover {
+  background: var(--bg-secondary);
+}
+
+.modalBody {
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.liquidoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.liquidoLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.liquidoInputGroup {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  overflow: hidden;
+  min-height: 2.5rem;
+}
+
+.liquidoPrefix {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-right: 1px solid #ccc;
+  min-width: 40px;
+  text-align: center;
+}
+
+.liquidoInput {
+  flex: 1;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  background: transparent;
+  color: #333;
+  outline: none;
+  min-height: 2.5rem;
+}
+
+.liquidoInput::placeholder {
+  color: #999;
+}
+
+.modalFooter {
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid var(--border-secondary);
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  background: transparent;
+}
+
+.modalButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.modalButton:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButton i {
+  font-size: 0.8rem;
+  width: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    max-width: 600px;
+  }
+  
+  .modalTitle {
+    font-size: 0.85rem;
+  }
+  
+  .modalButton {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 650px;
+  }
+  
+  .modalTitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .modalContent {
+    max-width: 700px;
+  }
+}
+@media (min-width: 768px) {
+  .modalContent {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .modalContent {
+    max-width: 1100px;
+  }
+}
+.inconsistenciasSection {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.inconsistenciasTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modalHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modalHeaderLeft i {
+  font-size: 1rem;
+  color: white;
+}
+
+.tipoVisualizacaoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tipoVisualizacaoLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.modalButtonGerar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.modalButtonGerar:hover {
+  background: #45a049;
+  border-color: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonGerar i {
+  font-size: 0.8rem;
+}
+
+.modalButtonFechar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #666;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.modalButtonFechar:hover {
+  background: #555;
+  border-color: #555;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonFechar i {
+  font-size: 0.8rem;
+} 
+
+.filtroTabelaButton {
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: var(--red-600);
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+}
+
+.filtroTabelaButton:hover {
+  background-color: var(--red-800);
+} 

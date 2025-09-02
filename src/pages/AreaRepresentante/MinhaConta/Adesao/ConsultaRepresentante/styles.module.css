@@ -1,0 +1,334 @@
+.divConteudo{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  
+.modal {
+  position: fixed; /* Fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Fica sobre tudo */
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+  .divBotao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-items: center;
+  border-top: 1px solid var(--cinza-claro);
+  padding-top: 1rem;
+  }
+  
+  .divBotaoGroup {
+  display: contents;
+  }
+  
+  .divBotaoGroup:first-child {
+  justify-content: flex-start;
+  }
+  
+  .divBotaoGroup:first-child .BotaoGravar:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  }
+  
+  .divBotaoGroup:first-child .BotaoAction:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  }
+  
+  .divBotaoGroup:first-child .BotaoRemover:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+  }
+  
+  .divBotaoGroup:last-child .BotaoNavegador:nth-child(1) {
+  grid-column: 2;
+  grid-row: 2;
+  }
+  
+  .divBotaoGroup:last-child .BotaoVoltar:nth-child(2) {
+  grid-column: 1;
+  grid-row: 3;
+  }
+  
+  .BotaoGravar,
+  .BotaoAction,
+  .BotaoVoltar,
+  .BotaoRemover,
+  .btnProximo,
+  .btnAnterior,
+  .BotaoNavegador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 500;
+  }
+  
+  .BotaoGravar {
+  background: #10b981;
+  color: white;
+  }
+  
+  .BotaoGravar:hover {
+  background: #059669;
+  }
+  
+  .BotaoAction {
+  background: #3b82f6;
+  color: white;
+  }
+  
+  .BotaoAction:hover {
+  background: #2563eb;
+  }
+  
+  .BotaoVoltar {
+  background: #6b7280;
+  color: white;
+  }
+  
+  .BotaoVoltar:hover {
+  background: #4b5563;
+  }
+  
+  .BotaoRemover {
+  background: #ef4444;
+  color: white;
+  }
+  
+  .BotaoRemover:hover {
+  background: #dc2626;
+  }
+  
+  .BotaoNavegador {
+  background: #7c3aed;
+  color: white;
+  }
+  
+  .BotaoNavegador:hover {
+  background: #6d28d9;
+  }
+  
+  .BotaoAction {
+  background: #dc2626;
+  color: white;
+  }
+  
+  .BotaoAction:hover {
+  background: #b91c1c;
+  }
+  
+.btnAnterior {
+    background: #dc2626;
+    color: white;
+    }
+    
+.btnAnterior:hover {
+    background: #b91c1c;
+    }
+  
+  .btnProximo {
+  background: #059669;
+  color: white;
+  }
+  
+  .btnProximo:hover {
+  background: #047857;
+  }
+  
+  .pais{
+    width: 30%;
+  }
+  
+  .campo{
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  
+  .filtroTabelaButton {
+  border: none;
+  border-radius: 0.5rem;
+  /* padding: 0.65rem 1rem; */
+  padding: 0.65rem 0rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  line-height: unset;
+  background-color: var(--red-600);
+  color:#f6f6f6;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  gap: 0.2rem;
+  }
+  
+  .filtroTabelaField{
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  
+  .filtroTabelaContent{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--branco);
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .filtroTabelaContentNovo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--branco);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .filtroTabelaHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .filtroTabelaTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+   }
+  
+  .pesquisar,.status{
+    width: 15%;
+  }
+  
+  .texto{
+    width: 30%;
+    margin: 1rem 0 0 2rem;
+  }
+  
+  .pesquisar, .status{
+    margin: 1rem 0;
+  }
+  
+  .tabela{
+    margin: 0.5rem 0 ;
+  }
+  
+  .TitleRepresentante {
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+   }
+  
+   
+  @media (min-width: 768px) {
+  .TitleRepresentante {
+    font-size: 1.15rem;
+  }
+  
+  .divBotao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .divBotaoGroup {
+      display: flex;
+      gap: 0.75rem;
+  }
+  
+  .BotaoGravar,
+  .BotaoAction,
+  .BotaoVoltar,
+  .BotaoRemover,
+  .btnProximo,
+  .btnAnterior,
+  .BotaoNavegador {
+      padding: 0.65rem 1rem;
+      width: 7rem;
+      height: 2rem;
+      font-size: 0.85rem;
+  }
+  }
+  
+  @media (min-width: 1024px) {
+  .TitleRepresentante {
+    font-size: 1.25rem;
+  }
+  
+  .divConteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .BotaoGravar,
+  .BotaoAction,
+  .BotaoVoltar,
+  .BotaoRemover,
+  .btnProximo,
+  .btnAnterior,
+  .BotaoNavegador {
+      font-size: 0.85rem;
+      width: 7rem;
+      height: 2rem;
+  }
+  }

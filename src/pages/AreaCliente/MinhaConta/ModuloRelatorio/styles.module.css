@@ -1,0 +1,445 @@
+.relatoriosContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.relatoriosContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    background: var(--branco);
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.relatoriosTitleTela {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-padrao);
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.relatoriosDescriptionTela {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.relatoriosField {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    will-change: max-width;
+    transition: max-width 0.3s ease;
+}
+
+.relatoriosFieldMinimized {
+    min-width: 4.6rem;
+    max-width: 4.6rem;
+}
+
+.relatoriosFieldMinimized .relatoriosFieldItem {
+    cursor: default;
+    pointer-events: none;
+}
+
+.relatoriosFieldMinimized .relatoriosFieldItemIcon {
+    cursor: default;
+    pointer-events: none;
+}
+
+.relatoriosFieldMinimized * {
+    cursor: default;
+    pointer-events: none;
+}
+
+.relatoriosFieldHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding-right: 6px;
+}
+
+.relatoriosFieldList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
+.relatoriosFieldList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.relatoriosFieldList::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+}
+
+.relatoriosFieldList:hover::-webkit-scrollbar-thumb {
+    background: var(--cinza-claro);
+}
+
+.relatoriosFieldItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--cinza-claro);
+    position: relative;
+    overflow: hidden;
+}
+
+.relatoriosFieldItemTextContainer {
+    max-width: calc(100% - 2rem - 2rem - 2rem);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.relatoriosFieldItemText {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    will-change: transform;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.relatoriosFieldItem:hover .relatoriosFieldItemText {
+    color: var(--cor-padrao);
+}
+
+.relatoriosFieldItemIcon {
+    min-width: 2rem;
+    min-height: 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: unset;
+    background: car(--cinza-padrao);
+    color: #f6f6f6;
+    transition: all 0.25s ease-in-out;
+}
+
+.relatoriosFieldSlider {
+    display: none;
+}
+
+.relatoriosFieldSliderSpan {
+    display: none;
+}
+
+.modalContainer {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--cor-claro);
+    box-shadow: 2px 2px 10px 0px rgba(150, 148, 149, 0.5);
+    width: calc(100% - var(--header-padding) * 2);
+    z-index: 4;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2.25rem;
+    max-height: calc(100vh - var(--header-height) * 2);
+    flex: 1;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalHeader h2 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--cor-padrao);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.25rem;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: calc(100% - var(--header-height));
+}
+
+.modalForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filtroModalActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex: 1;
+}
+
+.filtroModalCancel,
+.filtroModalSubmit {
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.filtroModalCancel {
+    background-color: white;
+    border: 1px solid var(--cinza-claro);
+    color: var(--cinza-padrao);
+}
+
+.filtroModalSubmit {
+    background-color: var(--cor-padrao);
+    border: 1px solid var(--cor-padrao);
+    color: white;
+}
+
+.tabelaField {
+    position: relative;
+}
+
+.tabelaHeader {
+    padding: 1rem 0;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tabelaHeaderTitle {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (min-width: 580px) {
+    .relatoriosFieldList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .relatoriosFieldItem {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: calc(50% - 1.375rem);
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .relatoriosTitleTela {
+        font-size: 1.15rem;
+    }
+
+    .relatoriosFieldList {
+        flex-direction: column;
+        overflow: auto;
+        flex-wrap: nowrap;
+    }
+
+    .relatoriosFieldItem {
+        max-width: calc(100% - 1.525rem);
+        min-height: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .modalContainer {
+        width: 30rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .relatoriosTitleTela {
+        font-size: 1.25rem;
+    }
+
+    .relatoriosFieldItem {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .relatoriosContent {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .relatoriosFieldSlider {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        height: 2.5rem;
+        width: 3.5rem;
+        left: 1rem;
+        top: 1rem;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        box-shadow: -2px 0px 8px 0px rgba(150, 148, 149, 0.35);
+        border-radius: 5rem 2.2rem 3.25rem 5rem;
+        background: var(--branco);
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .relatoriosFieldSliderButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.65rem;
+        color: var(--cor-padrao);
+        font-size: 1rem;
+        transition: transform 0.25s ease-in-out;
+        background: transparent;
+    }
+
+    .relatoriosFieldSliderSpan {
+        display: flex;
+        position: absolute;
+        height: 2.5rem;
+        width: 3.5rem;
+        top: 0.8rem;
+        left: 0.8rem;
+        margin: 0;
+        z-index: 0;
+        box-shadow: 0px 0px 8px 0px rgba(150, 148, 149, 0.35);
+        border-radius: 1rem 0.65rem 0.65rem 1rem;
+        background: var(--branco);
+    }
+
+    .relatoriosField {
+        position: relative;
+        margin-top: 2.7rem;
+        padding-top: 2rem;
+    }
+
+    .relatoriosFieldSlider:focus,
+    .relatoriosFieldSlider:focus-visible,
+    .relatoriosFieldSlider:focus-within,
+    .relatoriosFieldSlider:focus+.relatoriosFieldSliderSpan,
+    .relatoriosFieldSlider:focus-visible+.relatoriosFieldSliderSpan,
+    .relatoriosFieldSlider:focus-within+.relatoriosFieldSliderSpan {
+        outline: none;
+    }
+
+    .sliderWithSideBar {
+        animation: sliderWithSideBar 0.8s ease-in-out;
+    }
+
+    .sliderWithoutSideBar {
+        animation: sliderWithoutSideBar 0.4s ease-in-out;
+        justify-content: flex-end;
+        transform: translateX(0.55rem);
+        border-radius: 0 5rem 5rem 0;
+        z-index: 0;
+    }
+
+    .sliderSpanWithSideBar {
+        animation: sliderSpanWithSideBar 0.4s ease-in-out;
+    }
+
+    .sliderSpanWithoutSideBar {
+        display: none;
+    }
+}
+
+@keyframes sliderWithSideBar {
+    0% {
+        width: 0rem;
+    }
+
+    50% {
+        width: 0rem;
+    }
+
+    100% {
+        width: 4.5rem;
+    }
+}
+
+@keyframes sliderWithoutSideBar {
+    0% {
+        transform: translateX(-3.5rem);
+    }
+
+    100% {
+        transform: translateX(0.55rem);
+    }
+}
+
+@keyframes sliderSpanWithSideBar {
+    0% {
+        transform: translateX(-2.5rem);
+        border-radius: 0 5rem 5rem 0;
+    }
+
+    50% {
+        border-radius: 0 5rem 5rem 0;
+    }
+
+    100% {
+        transform: translateX(0rem);
+        border-radius: 0 0.65rem 0.65rem 0;
+    }
+}

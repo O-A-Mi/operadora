@@ -1,0 +1,18 @@
+[
+  {
+    "nome": "João Silva",
+    "valor": 150.00,
+    "procedimento": "Consulta Médica",
+    "representante": "Dr. Carlos Santos",
+    "operadora": "Unimed",
+    "data": "2024-01-15"
+  },
+  {
+    "nome": "Maria Oliveira",
+    "valor": 89.90,
+    "procedimento": "Exame Laboratorial",
+    "representante": "Lab. Diagnóstico",
+    "operadora": "Amil",
+    "data": "2024-01-16"
+  }
+] 

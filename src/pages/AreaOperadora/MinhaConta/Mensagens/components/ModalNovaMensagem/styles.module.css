@@ -1,0 +1,442 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.modalContent {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  max-width: 800px;
+  width: calc(100% - 2rem);
+  max-height: 90vh;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 0;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.modalHeaderLeft {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  gap: 0.5rem;
+}
+
+.modalHeaderLeft i {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.modalTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modalCloseButton {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCloseButton:hover {
+  background: var(--bg-secondary);
+}
+
+.modalBody {
+  padding: 1rem;
+  background: var(--bg-primary);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modalFooter {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-secondary);
+  justify-content: flex-start;
+}
+
+.EmailContainer,
+.TelefoneContainer,
+.AssuntoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.EmailContainer label,
+.TelefoneContainer label,
+.AssuntoContainer label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.EmailInputs,
+.TelefoneInputs {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.inputEmail,
+.inputTelefone,
+.inputAssunto,
+.inputNome {
+  padding: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.inputEmail:focus,
+.inputTelefone:focus,
+.inputAssunto:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.inputNome {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.selectEmail,
+.selectTelefone {
+  padding: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 60px;
+}
+
+.contadorCaracteres {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.modalButtonFechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #6c757d;
+  color: white;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.modalButtonFechar:hover {
+  background: #5a6268;
+  border-color: #545b62;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonFechar i {
+  font-size: 0.8rem;
+}
+
+.modalButtonEnviar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.modalButtonEnviar:hover {
+  background: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modalButtonEnviar i {
+  font-size: 0.8rem;
+}
+
+/* Estilos específicos do modal de mensagem */
+.ModoEnvio {
+  margin-bottom: 1rem;
+}
+
+.EnvioRadio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.radioLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioCustom {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.radioInput:checked + .radioCustom::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.SelectModalOptions {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ModeloInp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.RemDes {
+  display: flex;
+  gap: 1rem;
+}
+
+.Sms {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputGroup label {
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.wysiwyg {
+  width: 100%;
+  min-height: 200px;
+  max-height: 300px; 
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  font-family: inherit;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.TextAreaModal {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  font-family: inherit;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  resize: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.TextAreaModal:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.destinatarioContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+}
+
+.TituloTabela {
+  padding-bottom: 1rem;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.SelectInp {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.SelectLinha {
+  display: flex;
+  gap: 1rem;
+}
+
+.TipoPlano,
+.Convenio {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ExtraSelect {
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.expandHidden {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.expandVisible {
+  max-height: 500px; 
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 768px) {
+  .modalContent {
+    max-width: 900px;
+  }
+  
+  .modalTitle {
+    font-size: 1.1rem;
+  }
+  
+  .modalButtonFechar,
+  .modalButtonEnviar {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 1000px;
+  }
+  
+  .modalTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .modalContent {
+    max-width: 1100px;
+  }
+} 

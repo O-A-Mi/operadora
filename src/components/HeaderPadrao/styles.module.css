@@ -1,0 +1,809 @@
+.headerContainer{
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 3;
+    background: var(--background-header);
+    transition: background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1), border-bottom 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerContent{
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    padding: 0 var(--header-padding);
+    width: 100%;
+    height: 100%;
+}
+
+.headerImageField{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-right: auto;
+    object-fit: contain;
+   }
+
+.headerMenu{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px;
+    align-items: flex-start;
+    position: fixed;
+    top: calc(var(--header-height) + 1px);
+    right: 0;
+    width: 100%;
+    min-width: 170px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), 
+                opacity 0.3s cubic-bezier(0.4,0,0.2,1),
+                visibility 0.3s cubic-bezier(0.4,0,0.2,1),
+                background 0.4s cubic-bezier(0.4,0,0.2,1), 
+                color 0.4s cubic-bezier(0.4,0,0.2,1), 
+                box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerMenuItem,
+.closeSubMenu,
+.headerSubMenuItens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--branco);
+    transition: font-weight 0.4s cubic-bezier(0.4,0,0.2,1), background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1), border-bottom 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerMenuItemActive {
+    color: var(--branco);
+}
+
+.headerMenuItemLoggedActive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    height: var(--item-height);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1), border-bottom 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerMenuItemLoggedActive:hover{
+    color: var(--cor-padrao);
+}
+
+.headerLoginButton i{
+    display: none;
+}
+
+.headerLoginButton span:before{
+    content: 'Login';
+}
+
+.headerResponsiveBtn{
+    display: none;
+}
+
+.headerResponsiveBtnLabel{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: var(--header-height);
+    width: var(--header-height);
+    gap: 0.4rem;
+    z-index: 10;
+}
+
+.headerResponsiveBtnLabel .barra {
+    width: 1.5rem;
+    height: 3px;
+    background-color: var(--cor-escuro);
+    border-radius: 1rem;
+    transition: background-color 0.15s ease-in-out,
+                transform 0.15s ease-in-out,
+                opacity 0.15s ease-in-out;
+}
+  
+.headerResponsiveBtn:checked ~ .headerResponsiveBtnLabel .barra:nth-last-child(1){
+    transform: translate(0px, -0.6rem) rotate(-45deg);
+}
+  
+.headerResponsiveBtn:checked ~ .headerResponsiveBtnLabel .barra:nth-last-child(2){
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+
+.headerResponsiveBtn:checked ~ .headerResponsiveBtnLabel .barra:nth-last-child(3){
+    transform: translate(0px, 0.6rem) rotate(45deg);
+}
+
+.headerResponsiveBtn:checked ~ .headerMenu{
+    max-height: 100vh;
+    opacity: 1;
+    visibility: visible;
+}
+
+.headerNavbar{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0.5rem;
+    gap: 1rem;
+}
+
+.headerNavbarItem{
+    display: flex;
+    align-items: center;
+    height: var(--item-height);
+    padding: 0;
+    cursor: pointer;
+    font-size: small;
+    color: var(--cor-padrao);
+    text-align: center;
+}
+
+.headerNavbarButton{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-size: small;
+    background-color: var(--erro);
+    border: 1px solid var(--erro);
+    color: #ffffff;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1), border 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerNavbarButton:hover{
+    background-color: transparent;
+    color: var(--erro);
+}
+
+.headerNavbarButton i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+.headerThemeButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+}
+
+.headerUserButtonMenu{
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0.5rem;
+}
+
+.headerUserMenuButton{
+    display: none;
+}
+
+.headerUserButton,
+.headerShoppingButton{
+    list-style-type: none;
+    margin: 0;
+}
+
+.headerUserButton button,
+.headerShoppingButton button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: small;
+    background-color: transparent;
+  border: 1px solid var(--branco);
+    color: var(--branco);
+    font-weight: 600;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1), border 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerShoppingButton button{
+    width: 2.5rem;
+    border-radius: 100%;
+    position: relative;
+}
+
+.headerThemeButtonContainer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--cor-padrao);
+    border: none;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), 
+                color 0.4s cubic-bezier(0.4,0,0.2,1), 
+                border-color 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.headerThemeButtonContainer button:hover {
+    color: var(--branco);
+}
+
+.headerStatusButton button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    color: var(--cor-padrao);
+    border: none;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerStatusButton button:hover {
+    background-color: var(--cinza-claro);
+    color: var(--cor-branco);
+}
+
+.menuHidden{
+    display: none !important;
+}
+
+.headerMenuUserOptions{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+.headerMenuUserOptions .headerMenuItem{
+    color: var(--cor-escuro);
+    justify-content: space-around;
+}
+
+.headerSubMenuContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    overflow: auto;
+    width: 100%;
+}
+
+.headerSubMenu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--cinza-claro);
+    padding-top: 0.5rem;
+}
+
+.closeSubMenu{
+    font-size: 16px;
+}
+
+.headerSubMenuItens{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    height: auto;
+}
+
+.headerSubMenuItensText{
+    display: none;
+    font-size: 13px;
+}
+
+.headerSubMenuItens.active .headerSubMenuItensText,
+.headerSubMenuItens.active .headerSubMenuItensBox p{
+    display: flex;
+    color: var(--cor-auxiliar);
+}
+
+.headerSubMenuItensBox{
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.headerSubMenuItensBox p,
+.headerSubMenuItensText,
+.headerSubMenuInput{
+    margin: 0;
+}
+
+.profileImage{
+    width: 26px;
+    height: 26px;
+    border-radius: 15px;
+}
+
+.profileImageWrapper {
+    position: relative;
+    display: inline-flex;
+}
+
+.statusDot {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--branco);
+}
+
+.statusDotAtivo {
+    background-color: #3BA55D;
+}
+
+.statusDotInativo {
+    background-color: #6B7280;
+}
+
+.carrinhoBackdrop{
+    align-items: center;
+    justify-content: center;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    right: 100%;
+    width: 200%;
+    transition: width 0.3s;
+}
+
+.carrinhoContainer{
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1200;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    flex: 1 0 auto;
+    outline: 0px;
+    width: 100%;
+    gap: 0.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+}
+
+.carrinhoOpen{
+    right: 0;
+}
+
+.carrinhoBackdrop.carrinhoOpen{
+    position: fixed;
+    width: calc(100% - 360px);
+    transition: width 0.3s;
+}
+
+.carrinhoContainer.carrinhoOpen{
+    transform: translateX(0%);
+}
+
+.carrinhoHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+    color: var(--cor-padrao);
+}
+
+.carrinhoTitle{
+    font-weight: 700;
+}
+
+.carrinhoHeader i {
+    flex: 1;
+    border-radius: 4px;
+    min-height: 22px;
+    min-width: 22px;
+    width: 22px;
+    max-width: 22px;
+    font-size: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    color: #0736c4;
+    transition: color 0.2s ease-in-out;
+}
+
+.carrinhoHeader i:hover {
+    color: #2b5ff8;
+}
+
+.carrinhoItems{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0px 16px;
+    overflow: auto;
+}
+
+.carrinhoVazioText{
+    color: #444;
+    text-align: center;
+}
+
+.itemDetails {
+    background-color: #faf9ff;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoRemoveSpace {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoLabel {
+    color: #444;
+    font: 400 12px Montserrat, sans-serif;
+}
+
+.infoValue {
+    color: #444;
+    font: 600 13px Montserrat, sans-serif;
+    margin-top: 4px;
+}
+
+.itemPriceGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemPriceOld {
+    color: #d83939;
+    font: 700 14px Montserrat, sans-serif;
+    margin: 0;
+    margin-right: 8px;
+    text-decoration: line-through;
+}
+
+.itemPrice {
+    color: #00a700;
+    font: 700 14px Montserrat, sans-serif;
+    margin: 0;
+}
+
+.removeButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0736c4;
+    background: none;
+    border: none;
+    font: 500 13px Montserrat, sans-serif;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: color 0.2s ease-in-out;
+}
+
+.removeButton:hover {
+    color: #2b5ff8;
+}
+
+.removeIcon::before {
+    content: "\f2ed";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.carrinhoFooter{
+    padding: 16px 16px 0px;
+}
+
+.summaryTitle{
+    margin: 0;
+    margin-bottom: 16px;
+    font: 600 15px Montserrat, sans-serif;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font: 400 13px Montserrat, sans-serif;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.totalRow {
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.useBalanceCheckbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 16px;
+    font: 500 13px Montserrat, sans-serif;
+    color: #444;
+}
+
+.checkoutButton {
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    font: 500 14px Montserrat, sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0736c4;
+    border: 1px solid #0736c4;
+    color: #fff;
+    margin-top: 16px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.checkoutButton:hover {
+  background-color: transparent;
+  color: #0736c4;
+}
+
+.carrinhoCount {
+    background-color: #d83939;
+    border-radius: 10px; 
+    color: white;
+    padding: 3px 5px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.carrinhoVazioContainer {
+    margin-top: 30vh;
+    text-align: center;
+}
+
+.carrinhoVazioContainer>i {
+    font-size: 5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 1rem;
+}
+
+.carrinhoVazioText {
+    font-size: 1.5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 1.5rem;
+}
+
+.logoOperadora{
+    width: 100%;
+    height: 60px;
+    transition: background 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Menu aberto programaticamente - usado em componentes React */
+.headerMenuActive {
+    max-height: 100vh !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@media (min-width: 768px) {
+    .headerMenu{
+        flex-direction: row;
+        position: relative;
+        top: unset;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+        background: transparent;
+        box-shadow: none;
+        max-height: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .headerMenu.logged{
+        padding: 0.5rem 0;
+        display: none;
+        flex-direction: column;
+        width: auto;
+        position: fixed;
+        left: unset;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+        z-index: 1000;
+        max-height: 90vh;
+        overflow-y: auto;
+        background: #f9f9f9;
+    }
+
+    .headerMenu.guestMenu{
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        margin-left: auto;
+    }
+
+    .headerMenuActive{
+        display: flex !important;
+    }
+    
+    .headerUserMenuButton{
+        display: flex;
+    }
+
+    .headerMenuItem,
+    .closeSubMenu,
+    .headerSubMenuItens{
+        font-size: small;
+        border-bottom: none;
+    }
+
+    .headerMenu.logged .headerMenuItem i{
+        color: var(--cor-padrao);
+    }
+    
+    .headerMenuItem:hover{
+        font-weight: 600;
+    }
+
+    .headerSubMenuItens:hover,
+    .closeSubMenu:hover{
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    .headerMenuItem.headerLoginButton + .headerMenuItem.headerMenuItem:nth-child(2):not(.logged .headerMenuItem:nth-child(2)){
+        margin-left: auto;
+    }
+
+    .headerMenuItem:nth-child(6):not(.logged .headerMenuItem:nth-child(6)){
+        margin-right: auto;
+    }
+
+    .headerLoginButton,.headerLoginButton:hover{
+        order: 5;
+        gap: 0.5rem;
+        border-radius: 50rem;
+        background: var(--degrade-padrao);
+        padding: 0.65rem 1.25rem;
+        color: var(--branco);
+    }
+
+    .headerLoginButton i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .headerLoginButton span:before{
+        content: 'Fazer login';
+        font-size: small;
+    }
+    
+    .headerResponsiveBtn{
+        display: none;
+    }
+    
+    .headerResponsiveBtnLabel{
+        display: none;
+    }
+    
+    .headerNavbarButton{
+        font-size: small;
+    }
+
+    .headerSubMenu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid var(--cinza-claro);
+        padding-top: 0.5rem;
+    }
+    
+    .closeSubMenu{
+        font-size: 14px;
+    }
+    
+    .headerSubMenuItens{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .headerSubMenuItensText{
+        display: none;
+        font-size: 12px;
+    }
+    
+    .headerSubMenuItens.active .headerSubMenuItensText,
+    .headerSubMenuItens.active .headerSubMenuItensBox p{
+        display: flex;
+        color: var(--cor-auxiliar);
+    }
+    
+    .headerSubMenuItensBox{
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .headerSubMenuItensBox p,
+    .headerSubMenuItensText,
+    .headerSubMenuInput{
+        margin: 0;
+    }
+
+    .carrinhoContainer{
+        width: 360px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .headerMenu{
+        gap: 1rem;
+    }
+
+    .headerMenuItem,
+    .closeSubMenu,
+    .headerSubMenuItens{
+        font-size: 14px;
+    }
+
+    .headerUserButtonMenu{
+    display: flex;
+}
+}

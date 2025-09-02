@@ -1,0 +1,167 @@
+.container {
+    display: flex;
+    height: 100%;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    width: 230px;
+    overflow-y: auto;
+    max-height: 100vh;
+    display: flex;
+    padding-left: 1rem;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+  
+  .sidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.1s;
+    font-family: 'Montserrat';
+    background: var(--degrade-claro);
+  }
+  
+  .sidebarItem:hover {
+    background: var(--green-400);
+    transform: translateX(2px);
+  }
+  
+  .sidebarItem.ativo {
+    background: var(--green-400);
+    opacity: 90%;
+    border-bottom: 3px solid var( --emerald-700);
+  }
+  
+  .icon {
+    font-size: 1rem;
+  }
+  
+  .editorContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-left: 2rem;
+  }
+  
+  .editorContainer h2 {
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--cor-padrao);
+  }
+  
+.instrucao {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    color: var(--gray-400);
+  }
+
+.icon2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 7px;
+    background: var(--degrade-padrao);
+    color: var(--neutral-100);
+}
+
+.Pesquisar {
+  display: flex;
+  width: 25rem;
+  position: relative;
+  top: 3.7rem;
+}
+
+.filtroTabelaTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+
+.ToolbarPlan {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.SpanEye {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  color: var(--cor-padrao);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.SpanEye:hover {
+  transform: translateY(-2px);
+  color: var(--cor-frio);
+}
+
+.PlanHeader {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+.InputAlign {
+  position: relative;
+  padding-right: 2rem;
+  margin: 0;
+}
+
+.beneficiariosTitleTela {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--cor-padrao);
+  padding-bottom: 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin: 1rem 0;
+  position: relative;
+  top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}

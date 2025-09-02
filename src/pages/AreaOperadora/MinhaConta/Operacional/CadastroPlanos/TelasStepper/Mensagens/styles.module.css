@@ -1,0 +1,261 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formSectionWithBorder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--cinza-claro);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formSectionWithBorderTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--cinza-claro);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cor-padrao);
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+ }
+
+.sectionTitle i {
+  font-size: 0.9rem;
+}
+
+.firstTitle {
+  margin-top: 0;
+}
+
+.communicationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.communicationTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.communicationTitle i {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.communicationRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.communicationColumn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.columnLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.inputWithButton {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.visualizarButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  width: 7rem;
+  height: 2.5rem;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.visualizarButton:hover {
+  background: #2563eb;
+}
+
+.visualizarButton i {
+  font-size: 0.8rem;
+}
+
+.hotlinkSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hotlinkRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hotlinkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hotlinkTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.formActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--azul-padrao);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  line-height: unset;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  width: 7rem;
+  height: 2rem;
+}
+
+.actionButtonSalvar {
+  background: #10b981;
+  border-color: #10b981;
+}
+
+.actionButtonSalvar:hover {
+  background: #059669;
+}
+
+.actionButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.actionButton i {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+  .communicationTitle {
+    font-size: 1.1rem;
+  }
+  .formActions {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .actionButton {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+    justify-content: center;
+  }
+  
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  .communicationTitle {
+    font-size: 1.2rem;
+  }
+  .actionButton {
+    font-size: 0.85rem;
+    width: 7rem;
+    height: 2rem;
+  }
+  
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+  .communicationTitle {
+    font-size: 1.2rem;
+  }
+  .actionButton {
+    width: 7rem;
+    height: 2rem;
+  }
+  
+  .visualizarButton {
+    width: 8rem;
+    height: 2.5rem;
+  }
+}
