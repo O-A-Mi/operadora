@@ -412,9 +412,30 @@ const GuestUserMenu = ({ handleNavigate, showLogin, isMobile, onMenuOpen }) => {
         >
           <span>Operadora</span>
         </li>
+        <li 
+          className={`${styles.headerMenuItem} ${selectedArea === 'cliente' ? styles.headerMenuItemActive : ''}`} 
+          tabIndex="0" 
+          onClick={() => handleAreaClick('cliente', jsonRoute.Cliente_login)}
+        >
+          <span>Área do Conta</span>
+        </li>
+        <li 
+          className={`${styles.headerMenuItem} ${selectedArea === 'beneficiario' ? styles.headerMenuItemActive : ''}`} 
+          tabIndex="0" 
+          onClick={() => handleAreaClick('beneficiario', jsonRoute.Beneficiario_Login)}
+        >
+          <span>Área do Beneficiário</span>
+        </li>
+        <li 
+          className={`${styles.headerMenuItem} ${selectedArea === 'representante' ? styles.headerMenuItemActive : ''}`} 
+          tabIndex="0" 
+          onClick={() => handleAreaClick('representante', jsonRoute.Representante_Login)}
+        >
+          <span>Área do Consultor</span>
+        </li>
       </menu>
     </>
-  )
+  );
 };
 
 export default function HeaderPadrao({ onMenuOpen }) {
@@ -554,77 +575,70 @@ const fazerLogout = (rotaDestino) => {
     navigate(link, options);
   }, [navigate, isSubMenuOpen, toggleSubMenu, setIsMenuOpen]);
 
+  return (
+    <>
+      <header className={styles.headerContainer}>
+        <div className={styles.headerContent}>
+          <figure className={styles.headerImageField} >
+            <img 
+              src={drEnabled ? logoBranco2 : logoBranco2} alt="Logo"
+              className={styles.logoOperadora}
+            />
+          </figure>
+          {/* {usuarioLogado && (
+            <>
+              <div className={styles.headerThemeButtonContainer}>
+                <DarkReaderToggleButton iconOnly />
+              </div>
+            </>
+          )} */}
+          {usuarioLogado ? (
+            <LoggedUserMenu
+              handleNavigate={handleNavigate}
+              fazerLogout={fazerLogout}
+              toggleSubMenu={toggleSubMenu}
+              toggleMenu={toggleMenu}
+              toggleCarrinho={toggleCarrinho}
+              menuRef={menuRef}
+              buttonRef={buttonRef}
+              isMenuOpen={isMenuOpen}
+              isSubMenuOpen={isSubMenuOpen}
+              showLoader={showLoader}
+              hideLoader={hideLoader}
+              isMobile={isMobile}
+              onMenuOpen={onMenuOpen}
+            />
+          ) : (
+            <GuestUserMenu handleNavigate={handleNavigate} showLogin={showLogin} isMobile={isMobile} onMenuOpen={onMenuOpen} />
+          )}
+        </div>
+      </header>
 
-  const actualPathname = location.pathname.split('/')[1];
-  console.log(actualPathname);
-  if(actualPathname === 'login-operadora' || actualPathname === ''){
-    return null;
-  } else {
-    return (
-      <>
-        <header className={styles.headerContainer}>
-          <div className={styles.headerContent}>
-            <figure className={styles.headerImageField} >
-              <img 
-                src={drEnabled ? logoBranco2 : logoBranco2} alt="Logo"
-                className={styles.logoOperadora}
-              />
-            </figure>
-            {/* {usuarioLogado && (
-              <>
-                <div className={styles.headerThemeButtonContainer}>
-                  <DarkReaderToggleButton iconOnly />
-                </div>
-              </>
-            )} */}
-            {usuarioLogado ? (
-              <LoggedUserMenu
-                handleNavigate={handleNavigate}
-                fazerLogout={fazerLogout}
-                toggleSubMenu={toggleSubMenu}
-                toggleMenu={toggleMenu}
-                toggleCarrinho={toggleCarrinho}
-                menuRef={menuRef}
-                buttonRef={buttonRef}
-                isMenuOpen={isMenuOpen}
-                isSubMenuOpen={isSubMenuOpen}
-                showLoader={showLoader}
-                hideLoader={hideLoader}
-                isMobile={isMobile}
-                onMenuOpen={onMenuOpen}
-              />
-            ) : (
-              <GuestUserMenu handleNavigate={handleNavigate} showLogin={showLogin} isMobile={isMobile} onMenuOpen={onMenuOpen} />
-            )}
-          </div>
-        </header>
+      {isModalOpen('modalInfo') && (
+        <ModalInfo
+          onClose={() => closeModal("modalInfo")}
+        />
+      )}
+      {isModalOpen('modalAlterarSenha') && (
+        <ModalAlterarSenha
+          closeModal={() => closeModal("modalAlterarSenha")}
+        />
+      )}
+      {isModalOpen('modalAlterarStatus') && (
+        <ModalAlterarStatus
+          closeModal={() => closeModal('modalAlterarStatus')}
+        />
+      )}
 
-        {isModalOpen('modalInfo') && (
-          <ModalInfo
-            onClose={() => closeModal("modalInfo")}
-          />
-        )}
-        {isModalOpen('modalAlterarSenha') && (
-          <ModalAlterarSenha
-            closeModal={() => closeModal("modalAlterarSenha")}
-          />
-        )}
-        {isModalOpen('modalAlterarStatus') && (
-          <ModalAlterarStatus
-            closeModal={() => closeModal('modalAlterarStatus')}
-          />
-        )}
+       {isModalOpen('modalAlterarFoto') && (
+        <ModalAlterarFoto
+          closeModal={() => closeModal("modalAlterarFoto")}
+        />
+      )}
 
-        {isModalOpen('modalAlterarFoto') && (
-          <ModalAlterarFoto
-            closeModal={() => closeModal("modalAlterarFoto")}
-          />
-        )}
-
-        {['S'].includes(tipoUsuario) && (
-          <Carrinho isOpen={isCarrinhoOpen} closeCarrinho={closeCarrinho} />
-        )}
-      </>
-    );
-  }
+      {['S'].includes(tipoUsuario) && (
+        <Carrinho isOpen={isCarrinhoOpen} closeCarrinho={closeCarrinho} />
+      )}
+    </>
+  );
 }

@@ -58,9 +58,6 @@ const Cliente_login = () => {
         <>
             <div className={styles.loginClienteContainer}>
                 <div className={styles.loginClienteContent}>
-                    <div className={styles.contentColumn}>
-                        <img src={Cliente_Login_PNG} alt="Login Cliente" />
-                    </div>
                     <div className={styles.formColumn}>
                         <LoginForm openModal={openModal} showLoader={showLoader} hideLoader={hideLoader}/>
                     </div>

@@ -114,6 +114,44 @@ import InfoFuncionario from "./pages/AreaOperadora/MinhaConta/Operacional/Manute
 import InfoFornecedor from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Fornecedor/infoFornecedor";
 import InfoEntidade from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Entidade/infoEntidade";
 
+// ------------------- Area do Cliente ------------------- //
+import Cliente_login from "./pages/AreaCliente/LoginCliente/index.jsx";
+import Operadora_MinhaConta from "./pages/AreaCliente/MinhaConta/index.jsx";
+import HomeCliente from "./pages/AreaCliente/HomeCliente/index.jsx";
+import DashboardAdesao from "./pages/AreaCliente/MinhaConta/Adesao/index.jsx";
+import VendaCliente from "./pages/AreaCliente/MinhaConta/Adesao/VendaCliente/index.jsx";
+import ConsultaCliente from "./pages/AreaCliente/MinhaConta/Adesao/ConsultaCliente/index.jsx";
+import AcompanhamentoCliente from "./pages/AreaCliente/MinhaConta/Adesao/AcompanhamentoCliente/index.jsx";
+import Listagem_Beneficiarios from "./pages/AreaCliente/MinhaConta/ListagemBeneficiario/index.jsx";
+import Movimentacoes from "./pages/AreaCliente/MinhaConta/Movimentacoes/index.jsx";
+import Modulo_Relatorio from "./pages/AreaCliente/MinhaConta/ModuloRelatorio/index.jsx";
+import Dados_do_Cliente from "./pages/AreaCliente/MinhaConta/DadosCliente/index.jsx";
+import Financeiro_Cliente from "./pages/AreaCliente/MinhaConta/Financeiro/index.jsx";
+import Seguranca_Cliente from "./pages/AreaCliente/MinhaConta/Seguranca/usuario/index.jsx";
+import CriarClienteOperadora from "./pages/AreaCliente/MinhaConta/ListagemBeneficiario/components/CriarCliente.jsx";
+
+// ------------------- Area do Representante ------------------- //
+import Representante_Login from "./pages/AreaRepresentante/LoginRepresentante/index.jsx";
+import Representante_MinhaConta from "./pages/AreaRepresentante/MinhaConta/Index.jsx";
+import HomeRepresentante from "./pages/AreaRepresentante/MinhaConta/HomeRepresentante/index.jsx";
+import DadosRepresentante from "./pages/AreaRepresentante/MinhaConta/DadosRepresentante/index.jsx";
+import ListagemBeneficiarioRepresentante from "./pages/AreaRepresentante/MinhaConta/ListagemBeneficiario/index.jsx";
+import FaseAtendimento from "./pages/AreaRepresentante/MinhaConta/FaseAtendimento/components/index.jsx";
+import VendaCLienteRepresentante from "./pages/AreaRepresentante/MinhaConta/Adesao/VendaCliente";
+import ConsultaClienteRepresentante from "./pages/AreaRepresentante/MinhaConta/Adesao/ConsultaRepresentante";
+import AcompanhamentoClienteRepresentante from "./pages/AreaRepresentante/MinhaConta/Adesao/AcompanhamentoRepresentante";
+
+// ------------------- Area do Beneficiario ------------------- //
+import Beneficiario_login from "./pages/AreaBeneficiario/LoginCliente/index.jsx";
+import Beneficiario_MinhaConta from "./pages/AreaBeneficiario/MinhaConta/index.jsx";
+import HomeBeneficiario from "./pages/AreaBeneficiario/HomeBeneficiario/index.jsx";
+import Questionario_de_Vida from "./pages/AreaBeneficiario/MinhaConta/Questionario/index.jsx";
+import Perguntas_Declaracao from "./pages/AreaBeneficiario/MinhaConta/Perguntas/index.jsx";
+import Dados_do_Beneficiario from "./pages/AreaBeneficiario/MinhaConta/DadosCliente/index.jsx";
+import QuestionarioPerguntasVida from "./pages/AreaBeneficiario/MinhaConta/Perguntas/components/FaseAtendimento/index.jsx";
+import QuestionarioPerguntasDeclaracao from "./pages/AreaBeneficiario/MinhaConta/Questionario/components/FaseAtendimento/index.jsx";
+
+
 
 
 const ProjectRoutes = () => {
@@ -261,7 +299,57 @@ const ProjectRoutes = () => {
         <Route path={`${jsonRoute.Seguranca}/${jsonRoute.PermissaoInformacoes}`} element={<PermissaoInformacoes />} />
         <Route path={`${jsonRoute.Seguranca}/${jsonRoute.RelatoriosTab}`} element={<RelatoriosTab />} />
       </Route>
-    </Routes>
+            // ------------------- Area do Cliente ------------------- //
+      <Route path={jsonRoute.Operadora_Login} element={<Operadora_Login />} />
+      <Route path={jsonRoute.Cliente_login} element={<Cliente_login />} />
+      <Route path={jsonRoute.Operadora_MinhaConta} element={<ProtectedRoute><Operadora_MinhaConta /></ProtectedRoute>}>
+        <Route path={jsonRoute.HomeCliente} element={<HomeCliente />} />
+
+        {/* Area do Cliente - Adesao */}
+        <Route path={jsonRoute.Adesao_Cliente} element={<DashboardAdesao />} />
+        <Route path={`${jsonRoute.Adesao_Cliente}/${jsonRoute.Acompanhamento_Cliente}`} element={<AcompanhamentoCliente />} />
+        <Route path={`${jsonRoute.Adesao_Cliente}/${jsonRoute.Consulta_Cliente}`} element={<ConsultaCliente />} />
+        <Route path={`${jsonRoute.Adesao_Cliente}/${jsonRoute.Venda_Cliente}`} element={<VendaCliente />} />
+        
+        
+        
+        
+        <Route path={jsonRoute.Listagem_Beneficiarios} element={<Listagem_Beneficiarios />} />
+        <Route path={jsonRoute.Movimentacoes} element={<Movimentacoes />} />
+        <Route path={jsonRoute.Modulo_Relatorio} element={<Modulo_Relatorio />} />
+        <Route path={jsonRoute.Dados_do_Cliente} element={<Dados_do_Cliente />} />
+        <Route path={jsonRoute.Financeiro_Cliente} element={<Financeiro_Cliente />} />
+        <Route path={jsonRoute.Seguranca_Cliente} element={<Seguranca_Cliente />} />
+        <Route path={jsonRoute.CriarClientOperadora} element={<CriarClienteOperadora />} />
+      </Route>
+
+      // ------------------- Area do Representante ------------------- //
+      <Route path={jsonRoute.Representante_Login} element={<Representante_Login />} />
+      <Route path={jsonRoute.Representante_Area} element={<ProtectedRoute><Representante_MinhaConta /></ProtectedRoute>}>
+        <Route index element={<HomeRepresentante />} />
+        <Route path="home" element={<HomeRepresentante />} />
+        <Route path={jsonRoute.Representante_ListagemBeneficiario} element={<ListagemBeneficiarioRepresentante />} />
+        <Route path={jsonRoute.Representante_DadosRepresentante} element={<DadosRepresentante />} />
+        <Route path="financeiro/*" element={<Representante_MinhaConta />} />
+        <Route path={jsonRoute.Acompanhamento_Representante} element={<AcompanhamentoClienteRepresentante />} />
+        <Route path={jsonRoute.Venda_Representante} element={<VendaCLienteRepresentante />} />
+        <Route path={jsonRoute.Consulta_Representante} element={<ConsultaClienteRepresentante />} />
+        <Route path={jsonRoute.Representante_FaseAtendimento} element={<FaseAtendimento />} />
+      </Route>
+
+      // ------------------- Area do Beneficiario ------------------- //
+      <Route path={jsonRoute.Beneficiario_login} element={<Beneficiario_login />} />
+      <Route path={jsonRoute.Beneficiario_MinhaConta} element={<ProtectedRoute><Beneficiario_MinhaConta /></ProtectedRoute>}>
+        <Route path={jsonRoute.HomeBeneficiario} element={<HomeBeneficiario />} />
+        <Route path={jsonRoute.Questionario_de_Vida} element={<Questionario_de_Vida />}>
+          <Route path={jsonRoute.QuestionarioPerguntasVida} element={<QuestionarioPerguntasVida/>}/> 
+        </Route>
+        <Route path={jsonRoute.Perguntas_Declaracao} element={<Perguntas_Declaracao />}>
+          <Route path={jsonRoute.QuestionarioPerguntasDeclaracao} element={<QuestionarioPerguntasDeclaracao/>}/> 
+        </Route>
+        <Route path={jsonRoute.Dados_do_Beneficiario} element={<Dados_do_Beneficiario />}/>       
+      </Route>
+    </Routes>    
   );
 };
 

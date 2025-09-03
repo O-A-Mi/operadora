@@ -99,32 +99,6 @@ export default function LoginRepresentante () {
     return (
         <div className={styles.loginRepresentanteContainer}>
             <div className={styles.loginRepresentanteContent}>
-                <div className={styles.contentColumn}>
-                    <h2 className={styles.superTitle}>
-                        <i className="fas fa-notes-medical" />
-                        <span> Área do representante</span>
-                    </h2>
-                    <h1 className={styles.title}>
-                        Bem vindo a área do representante
-                    </h1>
-                    <h2 className={styles.subTitle}> 
-                        Faça parte da nossa rede de atendimento e aumento o volume de consultas e exames na sua clínica.
-                    </h2>
-                    <p className={styles.text}>
-                        Os agendamentos serão realizados diretamente pelo cliente em contato com a clínica. O Cartão Saúde + proporciona a possibilidade de fidelização do cliente com a sua empresa. A consulta é a porta de entrada para que o cliente possa realizar os demais exames e procedimentos em sua clínica, pagando direto ao representante.
-                    </p>
-                    <button className={styles.whatsappButton} onClick={() => alert("Whatsapp")}>
-                        <i className="fab fa-whatsapp" />
-                        <span>Entre em contato via whatsapp</span>
-                    </button>
-                    <p className={styles.text}>
-                        Em caso de dúvidas entre em contato pelo email:
-                    </p>
-                    <a className={styles.email} onClick={(e) => copiarEmail(e)}>
-                        <i className="fas fa-envelope" />
-                        <span>{email}</span>
-                    </a>
-                </div>
                 <div className={styles.formColumn}>
                     <LoginForm openModal={openModal} showLoader={showLoader} hideLoader={hideLoader}/>
                 </div>

@@ -1,9 +1,10 @@
 .loginClienteContainer{
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
   max-height: calc(100vh - var(--header-height));
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
   background: var(--cor-claro);
   overflow: hidden;
 }
@@ -23,7 +24,9 @@
 
 .formColumn{
   padding: 2.5rem;
-  z-index: 1; 
+  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .loginForm{
@@ -37,31 +40,11 @@
   background: var(--branco);
 }
 
-.formStateButtons{
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.formStateButton{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem;
-  gap: 0.75rem;
-  border: 1px solid var(--cinza-claro);
-  border-radius: 0.5rem;
-  background: transparent;
-  flex: 1;
-  color: var(--cinza-padrao);
-  cursor: pointer;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.formStateButton.active{
-  border-color: var(--cor-padrao);
+.loginFormTitle{
   color: var(--cor-padrao);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
 }
 
 .loginFormContent {
@@ -70,13 +53,6 @@
   gap: 1rem;
   width: 100%;
   justify-content: center;
-}
-
-.loginFormTitle{
-  color: var(--cor-padrao);
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0 0 1rem 0;
 }
 
 .inputGroup {
@@ -233,7 +209,7 @@
     object-fit: cover;
     object-position: right;
   }
-  
+
   .formColumn{
     padding: 5rem 2.5rem;
     width: 50%;
@@ -248,4 +224,12 @@
   .contentColumn{
       margin-right: auto;
   }
+}
+
+@media (min-width: 1280px) {
+
+}
+
+@media (min-width: 1600px) {
+
 }
