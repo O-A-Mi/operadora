@@ -27,9 +27,18 @@ import MigracaoPlano from "./pages/AreaOperadora/MinhaConta/Operacional/Migracao
 import MigracaoColaborador from "./pages/AreaOperadora/MinhaConta/Operacional/Migracao/Colaborador";
 import MigracaoFornecedor from "./pages/AreaOperadora/MinhaConta/Operacional/Migracao/Fornecedor";
 import MigracaoVigencia from "./pages/AreaOperadora/MinhaConta/Operacional/Migracao/Vigencia";
+
+import PlanoSaude from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/PlanoSaude";
+import NovoPlanoSaude from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/PlanoSaude/Novo";
 import Acompanhamento from "./pages/AreaOperadora/MinhaConta/Operacional/PortalEmpresarial/Acompanhamento";
 import Cancelamento from "./pages/AreaOperadora/MinhaConta/Operacional/PortalEmpresarial/Cancelamento";
 import ValidacaoProposta from "./pages/AreaOperadora/MinhaConta/Operacional/PortalEmpresarial/ValidacaoProposta";
+import GrupoContratual from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/GrupoContratual";
+import TipoPlano from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/TipoPlano";
+import FormaPagamento from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/FormaPagamento";
+import Parentesco from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Parentesco";
+
+
 
 // ------------------- Area Operadora - Financeiro ------------------- //
 import Financeiro from "./pages/AreaOperadora/MinhaConta/Financeiro";
@@ -94,8 +103,6 @@ import Mensagens from "./pages/AreaOperadora/MinhaConta/Mensagens";
 import Contratante from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Contratante";
 import NovoContratante from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Contratante/NovoContratante";
 import AtualizacaoPrecoLote from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/AtualizacaoPrecoLote"
-import PlanoSaude from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/PlanoSaude";
-import NovoPlanoSaude from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/PlanoSaude/NovoProdutoServico";
 import Operadora from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Operadora";
 import NovaOperadora from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Operadora/NovaOperadora";
 import Convenio from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Convenio";
@@ -174,8 +181,6 @@ const ProjectRoutes = () => {
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}`} element={<Contratante />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}/${jsonRoute.NovoContratante}`} element={<NovoContratante />} />
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.AtualizacaoPrecoLote}`} element={<AtualizacaoPrecoLote />}/>
-          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}`} element={<PlanoSaude />}/>
-          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`} element={<NovoPlanoSaude />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}`} element={<Operadora />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}/${jsonRoute.NovaOperadora}`} element={<NovaOperadora />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Convenio}`} element={<Convenio />}/>
@@ -195,6 +200,16 @@ const ProjectRoutes = () => {
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`} element={<NovoComboProdutoServico />} />
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroBeneficiarios}`} element={<CadastroBeneficiarios />} />
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroBeneficiarios}/${jsonRoute.CadastroBeneficiarioNovo}`} element={<CriarBeneficiario />} />
+
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}`} element={<PlanoSaude />}/>
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`} element={<NovoPlanoSaude />}/>
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroGrupoContratual}`} element={<GrupoContratual />} />
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroTipoPlano}`} element={<TipoPlano />} />
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroFormaPagamento}`} element={<FormaPagamento />} />
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroParentesco}`} element={<Parentesco />} />
+
+        <Route path={`${jsonRoute.Operacional}/${jsonRoute.Formulario}`} element={<FormularioOperadora />} />
+        <Route path={`${jsonRoute.Operacional}/${jsonRoute.Formulario}/${jsonRoute.FormularioCadastro}`} element={<FormularioCadastro />} />
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.CadastroPlanos}`} element={<CadastroPlanos />} />
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.CadastroPlanos}/${jsonRoute.CadastroPlanosNovo}`} element={<ComboNovo />} />
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.CriarCliente}`} element={<CriarCliente />} />
@@ -211,10 +226,14 @@ const ProjectRoutes = () => {
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.MigracaoColaborador}`} element={<MigracaoColaborador />} />
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.MigracaoFornecedor}`} element={<MigracaoFornecedor />} />
         <Route path={`${jsonRoute.Operacional}/${jsonRoute.MigracaoVigencia}`} element={<MigracaoVigencia />} />
-        <Route path={`${jsonRoute.Operacional}/${jsonRoute.Acompanhamento_Empresarial}`} element={<Acompanhamento />} />
-        <Route path={`${jsonRoute.Operacional}/${jsonRoute.Cancelamento_Empresarial}`} element={<Cancelamento />} />
-        <Route path={`${jsonRoute.Operacional}/${jsonRoute.ValidacaoProposta_Empresarial}`} element={<ValidacaoProposta />} />
 
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.Acompanhamento_Empresarial}`} element={<Acompanhamento />} />
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.Cancelamento_Empresarial}`} element={<Cancelamento />} />
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.ValidacaoProposta_Empresarial}`} element={<ValidacaoProposta />} />
+
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.Acompanhamento_Adesao}`} element={<Acompanhamento />} />
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.Cancelamento_Adesao}`} element={<Cancelamento />} />
+          <Route path={`${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.ValidacaoProposta_Adesao}`} element={<ValidacaoProposta />} />
         
         {/* Area Operadora - Outros */}
         <Route path={jsonRoute.Relatorios} element={<Relatorios />} />
@@ -285,10 +304,7 @@ const ProjectRoutes = () => {
         <Route path={`${jsonRoute.Configuracoes}/${jsonRoute.Departamento}`} element={<Departamento />}>
           <Route path={'cadastro'} element={<DepartamentoEdit />} />
         </Route>
-        
-        {/* Area Operadora - Configurações - Formulários */}
-        <Route path={`${jsonRoute.Configuracoes}/${jsonRoute.Formulario}`} element={<FormularioOperadora />} />
-        <Route path={`${jsonRoute.Configuracoes}/${jsonRoute.Formulario}/${jsonRoute.FormularioCadastro}`} element={<FormularioCadastro />} />
+
         <Route path={`${jsonRoute.Configuracoes}/${jsonRoute.ConfigPadrao}`} element={<ConfiguracaoPadrao />} />
 
         {/* Area Operadora - Segurança */}

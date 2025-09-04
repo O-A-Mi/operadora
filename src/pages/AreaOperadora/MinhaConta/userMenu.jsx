@@ -25,7 +25,7 @@ import { useArea } from '../../../context/AreaContext';
 const formatTooltipText = (text) => {
   const wordMap = {
     'FINANCEIRO': 'Financeiro',
-    'CONFIGURACOES': 'Configurações',
+    // 'CONFIGURACOES': 'Configurações',
     'OPERACIONAL': 'Operacional',
     'SEGURANCA': 'Segurança',
     'RELATORIOS': 'Relatórios',
@@ -36,7 +36,7 @@ const formatTooltipText = (text) => {
     'DADOS REPRESENTANTE': 'Dados do Representante',
     'VALIDAR PACIENTE': 'Validar Paciente',
     'LOTES': 'Lotes',
-    'MANUTENCAO': 'Manutenção',
+    // 'MANUTENCAO': 'Manutenção',
   };
 
   return wordMap[text.toUpperCase()] || text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
@@ -52,7 +52,7 @@ const ROTAS_DA_AREA_OPERADORA = [
   { id: "AREA_OPERADORA_RELATORIOS", path: jsonRoute.Relatorios, module: 'relatorios' },
   { id: "AREA_OPERADORA_SEGURANCA", path: jsonRoute.Seguranca, module: 'seguranca' },
   { id: "AREA_OPERADORA_CONFIGURACOES", path: jsonRoute.Configuracoes, module: 'configuracoes' },
-  { id: "AREA_OPERADORA_MANUTENCAO", path: jsonRoute.Manutencao, module: 'manutencao' },
+  // { id: "AREA_OPERADORA_MANUTENCAO", path: jsonRoute.Manutencao, module: 'manutencao' },
 ];
 
 const SUBMENUS = {
@@ -65,147 +65,157 @@ const SUBMENUS = {
 
   CONFIGURACOES:
     [
-      { label: "Agendador de Tarefas",
-        submenu:
-          [
-            { label: "Financeiro", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorFinanceiro}` },
-            { label: "Contratante",
-              submenu:
-                [
-                  { label: "Carta de cancelamento", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.CartaCacelamento}` },
-                ]
-            },
+      // { label: "Agendador de Tarefas",
+      //   submenu:
+      //     [
+      //       { label: "Financeiro", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorFinanceiro}` },
+      //       { label: "Contratante",
+      //         submenu:
+      //           [
+      //             { label: "Carta de cancelamento", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.CartaCacelamento}` },
+      //           ]
+      //       },
 
-            { label: "Associado", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorAssociado}` },
-            // { label: "Proposta", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorProposta}` },
+      //       { label: "Associado", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorAssociado}` },
+      //       // { label: "Proposta", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorProposta}` },
 
-            { label: "Proposta",
-              submenu:
-                [
-                  { label: "Boas-vindas", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.BoasVindas}` }
-                ]
-            },
+      //       { label: "Proposta",
+      //         submenu:
+      //           [
+      //             { label: "Boas-vindas", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.BoasVindas}` }
+      //           ]
+      //       },
 
-            { label: "Mudar Status", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorMudarStatus}` },
-            { label: "Andamento da Proposta", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AndamentoProposta}` },
-            { label: "Representante", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorRepresentante}` },
-            { label: "Plataforma CRM", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorPlataforma}` },
-          ]
-      },
+      //       { label: "Mudar Status", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorMudarStatus}` },
+      //       { label: "Andamento da Proposta", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AndamentoProposta}` },
+      //       { label: "Representante", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorRepresentante}` },
+      //       { label: "Plataforma CRM", path: `${jsonRoute.Configuracoes}/agendador/${jsonRoute.AgendadorPlataforma}` },
+      //     ]
+      // },
 
       // { label: "Especialidades", path: `${jsonRoute.Configuracoes}/${jsonRoute.Especialidades}` },
       { label: "Geral",
         submenu:
           [
-            { label: "Status", path: `${jsonRoute.Configuracoes}/geral/${jsonRoute.StatusGeral}` },
             { label: "Departamento", path:`${jsonRoute.Configuracoes}/geral/${jsonRoute.DepartamentoGeral}` },
-            { label: "Função do Usuario", path:`${jsonRoute.Configuracoes}/geral/${jsonRoute.FuncaoUsuarioGeral}` },
-            { label: "Assunto", path: "" },
-            { label: "Tipo Chamando", path: "" },
-            { label: "Documento/Arquivo", path: "" },
+            // { label: "Função do Usuario", path:`${jsonRoute.Configuracoes}/geral/${jsonRoute.FuncaoUsuarioGeral}` },
+            // { label: "Assunto", path: "" },
+            // { label: "Tipo Chamando", path: "" },
+            // { label: "Documento/Arquivo", path: "" },
             { label: "Pergunta da Declaração", path: "" },
-            { label: "Pergunta da Qualidade de Vida", path: "" },
+            // { label: "Pergunta da Qualidade de Vida", path: "" },
           ]
       },
 
-      { label: "Mensagens", path: `${jsonRoute.Configuracoes}/${jsonRoute.MensagensFerramenta}` },
+      // { label: "Mensagens", path: `${jsonRoute.Configuracoes}/${jsonRoute.MensagensFerramenta}` },
       //{ label: "Departamento", path: `${jsonRoute.Configuracoes}/${jsonRoute.Departamento}` },
-      { label: "Notificação", path: `${jsonRoute.Configuracoes}/${jsonRoute.Notificacao}` },
+      // { label: "Notificação", path: `${jsonRoute.Configuracoes}/${jsonRoute.Notificacao}` },
       { label: "Status", path: `${jsonRoute.Configuracoes}/${jsonRoute.Status}` },
       // { label: "Perguntas da Declaração", path: `${jsonRoute.Configuracoes}/${jsonRoute.PerguntasDeclaracao}` },
       // { label: "Questionário de Vida", path: `${jsonRoute.Configuracoes}/${jsonRoute.QuestionarioVida}` }, restante da dr online, n/a
-      { label: "Formulário", path: `${jsonRoute.Configuracoes}/${jsonRoute.Formulario}` },
-      { label: "Funções de Usuário", path: `${jsonRoute.Configuracoes}/${jsonRoute.FuncaoUsuario}` },
+      // { label: "Funções de Usuário", path: `${jsonRoute.Configuracoes}/${jsonRoute.FuncaoUsuario}` },
     ],
 
-  FINANCEIRO:
-    [
-      { label: "Lançamento", path: `${jsonRoute.Financeiro}/${jsonRoute.Lancamento}` },
-      { label: "Tesouraria",
-        submenu:
-          [
-            { label: "Fluxo de Caixa", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.FluxoCaixa}` },
-            { label: "Contas a Receber", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.ContasAReceber}` },
-            { label: "Contas a Pagar", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.ContasAPagar}` },
-            { label: "Comissão", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Comissao}` },
-            { label: "DRE", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.DRE}` },
-            { label: "Competência",
-              submenu:
-                [
-                  { label: "Fechamento", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Competencia}/${jsonRoute.Fechamento}` },
-                  { label: "Abertura", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Competencia}/${jsonRoute.Abertura}` },
-                ],
-            },
-          ],
-      },
-      { label: "Cobrança", path: `${jsonRoute.Financeiro}/${jsonRoute.Cobranca}` },
-      { label: "Serviços",
-        submenu:
-          [
-            { label: "Contrato", path: `${jsonRoute.Financeiro}/${jsonRoute.Servicos}/${jsonRoute.Contrato}` },
-            { label: "Alteração de Vencimento", path: `${jsonRoute.Financeiro}/${jsonRoute.Servicos}/${jsonRoute.AlteracaoVencimento}` },
-          ],
-      },
+  // FINANCEIRO:
+  //   [
+  //     { label: "Lançamento", path: `${jsonRoute.Financeiro}/${jsonRoute.Lancamento}` },
+  //     { label: "Tesouraria",
+  //       submenu:
+  //         [
+  //           { label: "Fluxo de Caixa", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.FluxoCaixa}` },
+  //           { label: "Contas a Receber", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.ContasAReceber}` },
+  //           { label: "Contas a Pagar", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.ContasAPagar}` },
+  //           { label: "Comissão", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Comissao}` },
+  //           { label: "DRE", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.DRE}` },
+  //           { label: "Competência",
+  //             submenu:
+  //               [
+  //                 { label: "Fechamento", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Competencia}/${jsonRoute.Fechamento}` },
+  //                 { label: "Abertura", path: `${jsonRoute.Financeiro}/${jsonRoute.Tesouraria}/${jsonRoute.Competencia}/${jsonRoute.Abertura}` },
+  //               ],
+  //           },
+  //         ],
+  //     },
+  //     { label: "Cobrança", path: `${jsonRoute.Financeiro}/${jsonRoute.Cobranca}` },
+  //     { label: "Serviços",
+  //       submenu:
+  //         [
+  //           { label: "Contrato", path: `${jsonRoute.Financeiro}/${jsonRoute.Servicos}/${jsonRoute.Contrato}` },
+  //           { label: "Alteração de Vencimento", path: `${jsonRoute.Financeiro}/${jsonRoute.Servicos}/${jsonRoute.AlteracaoVencimento}` },
+  //         ],
+  //     },
 
-      { label: "Banco",
-        submenu:
-          [
-            { label: "Arquivo Remessa", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.ArquivoRemessa}` },
-            { label: "Arquivo Retorno", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.ArquivoRetorno}` },
-            { label: "Remessa Banco Digital", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.RemessaBancoDigital}` },
-          ],
-      },
+  //     { label: "Banco",
+  //       submenu:
+  //         [
+  //           { label: "Arquivo Remessa", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.ArquivoRemessa}` },
+  //           { label: "Arquivo Retorno", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.ArquivoRetorno}` },
+  //           { label: "Remessa Banco Digital", path: `${jsonRoute.Financeiro}/${jsonRoute.Banco}/${jsonRoute.RemessaBancoDigital}` },
+  //         ],
+  //     },
 
-      { label: "Log de Auditoria", path: `${jsonRoute.Financeiro}/${jsonRoute.LogAuditoria}` },
-    ],
+  //     { label: "Log de Auditoria", path: `${jsonRoute.Financeiro}/${jsonRoute.LogAuditoria}` },
+  //   ],
   OPERACIONAL:
     [
       { label: "Manutenção",
         submenu:
           [
-            { label: "Contratante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}` },
+            { label: "Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}` },
+            { label: "Grupo Contratual", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroGrupoContratual}` },
+            { label: "Tipo Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroTipoPlano}` },
+            { label: "Forma de Pagamento", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroFormaPagamento}` },
+            { label: "Parentesco", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroParentesco}` },
+            // { label: "Contratante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}` },
             // { label: "Segurado", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Segurado}`},
-            { label: "Colaborador", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}` },
-            { label: "Representante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}` },
-            { label: "Fornecedor", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}` },
-            { label: "Beneficiários",
-              submenu:
-                [
-                  { label: "Titular", path: `${jsonRoute.Operacional}/manutencao//${jsonRoute.CadastroBeneficiarios}` },
-                  { label: "Dependente", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Depedente}` }
-                ],
-            },
-            // { label: "Entidade/Empresa", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}`}, Serviço não oferecido
-            // { label: "Tipo do Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}` },
-            { label: "Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}` },
-            // { label: "Operadora", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}`},
-            { label: "Convênio", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Convenio}` },
-            { label: "Atualização de Preço em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.AtualizacaoPrecoLote}` },
-            // { label: "Vigência e Transmissão em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.VigenciaTransmissao}`},
+            // { label: "Colaborador", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}` },
+            // { label: "Representante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}` },
+            // { label: "Fornecedor", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}` },
+            // { label: "Beneficiários",
+            //   submenu:
+            //     [
+            //       { label: "Titular", path: `${jsonRoute.Operacional}/manutencao//${jsonRoute.CadastroBeneficiarios}` },
+            //       { label: "Dependente", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Depedente}` }
+            //     ],
+            // },
+            // // { label: "Entidade/Empresa", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}`}, Serviço não oferecido
+            // // { label: "Tipo do Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}` },
+            // // { label: "Operadora", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}`},
+            // { label: "Convênio", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Convenio}` },
+            // { label: "Atualização de Preço em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.AtualizacaoPrecoLote}` },
+            // // { label: "Vigência e Transmissão em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.VigenciaTransmissao}`},
           ]
       },
+      // { label: "Movimentações", path: `${jsonRoute.Operacional}/${jsonRoute.MovBeneficiario}` },
 
-      { label: "Movimentações", path: `${jsonRoute.Operacional}/${jsonRoute.MovBeneficiario}` },
+      { label: "Formulário", path: `${jsonRoute.Operacional}/${jsonRoute.Formulario}` },
       { label: "Portal Empresarial",
         submenu:
           [
-            { label: "Acompanhamento", path: `${jsonRoute.Operacional}/${jsonRoute.Acompanhamento_Empresarial}` },
-            { label: "Cancelamento", path: `${jsonRoute.Operacional}/${jsonRoute.Cancelamento_Empresarial}` },
-            { label: "Validação de Proposta", path: `${jsonRoute.Operacional}/${jsonRoute.ValidacaoProposta_Empresarial}` },
+            { label: "Acompanhamento", path: `${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.Acompanhamento_Empresarial}` },
+            { label: "Cancelamento", path: `${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.Cancelamento_Empresarial}` },
+            { label: "Validação de Proposta", path: `${jsonRoute.Operacional}/${jsonRoute.PortalEmpresarial}/${jsonRoute.ValidacaoProposta_Empresarial}` },
           ]
       },
-
-      { label: "Migração de Dados",
+      { label: "Portal Adesão",
         submenu:
           [
-            { label: "Carterinha", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoCarterinha}` },
-            { label: "Representante", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoRepresentante}` },
-            { label: "Plano", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoPlano}` },
-            { label: "Colaborador", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoColaborador}` },
-            { label: "Fornecedor", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoFornecedor}` },
-            { label: "Vigência", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoVigencia}` },
+            { label: "Acompanhamento", path: `${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.Acompanhamento_Adesao}` },
+            { label: "Cancelamento", path: `${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.Cancelamento_Adesao}` },
+            { label: "Validação de Proposta", path: `${jsonRoute.Operacional}/${jsonRoute.PortalAdesao}/${jsonRoute.ValidacaoProposta_Adesao}` },
           ]
       },
+      // { label: "Migração de Dados",
+      //   submenu:
+      //     [
+      //       { label: "Carterinha", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoCarterinha}` },
+      //       { label: "Representante", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoRepresentante}` },
+      //       { label: "Plano", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoPlano}` },
+      //       { label: "Colaborador", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoColaborador}` },
+      //       { label: "Fornecedor", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoFornecedor}` },
+      //       { label: "Vigência", path: `${jsonRoute.Operacional}/${jsonRoute.MigracaoVigencia}` },
+      //     ]
+      // },
       // { label: "Plano/Serviço", path: `${jsonRoute.Operacional}/${jsonRoute.CadastroPlanos}` },
       // { label: "Representante",  path:`${jsonRoute.Operacional}/${jsonRoute.CadastroRepresentante}` },
       // { label: "Cliente",  path:`${jsonRoute.Operacional}/${jsonRoute.CadastroCliente}` },

@@ -1,3 +1,4 @@
+import Plano from "../pages/AreaOperadora/MinhaConta/Operacional/Migracao/Plano";
 
 
 export const jsonRoute = {
@@ -77,18 +78,29 @@ export const jsonRoute = {
   ComboProduto: "combo",
   NovoComboProdutoServico: "novo-combo",
   MovBeneficiario: "movimentacoes-beneficiario",
-  MigracaoCarterinha: "carterinha",
-  MigracaoRepresentante: "representante",
-  MigracaoPlano: "plano",
-  MigracaoColaborador: "colaborador",
-  MigracaoFornecedor: "fornecedor",
-  MigracaoVigencia: "vigencia",
+  MigracaoCarterinha: "migracao-carterinha",
+  MigracaoRepresentante: "migracao-representante",
+  MigracaoPlano: "migracao-plano",
+  MigracaoColaborador: "migracao-colaborador",
+  MigracaoFornecedor: "migracao-fornecedor",
+  MigracaoVigencia: "migracao-vigencia",
+  CadastroGrupoContratual: "cadastro-grupo-contratual",
+  CadastroTipoPlano: "cadastro-tipo-plano",
+  CadastroFormaPagamento: "cadastro-forma-pagamento",
+  CadastroParentesco: "cadastro-parentesco",
 
 
   // ------------------- PORTAL EMPRESARIAL ------------------- //
+  PortalEmpresarial: "portal-empresarial",
   Acompanhamento_Empresarial: "acompanhamento",
   Cancelamento_Empresarial: "cancelamento",
   ValidacaoProposta_Empresarial: "validacao-proposta",
+
+  // ------------------- PORTAL ADESÃO ------------------- //
+  PortalAdesao: "portal-adesao",
+  Acompanhamento_Adesao: "acompanhamento",
+  Cancelamento_Adesao: "cancelamento",
+  ValidacaoProposta_Adesao: "validacao-proposta",
 
   
   // Sub-rotas do Tesouraria

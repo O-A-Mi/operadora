@@ -1,0 +1,142 @@
+{
+  "planos": [
+    {
+      "codigo": "001",
+      "status": "ativo",
+      "tipoPlano": "Individual",
+      "convenio": "Convênio A",
+      "grupoContrato": "Grupo 1",
+      "descricao": "Plano Básico Individual",
+      "abreviacao": "PBI",
+      "entidade": "Entidade A",
+      "codigoExternoFornecedor": "FOR001",
+      "codigoExternoEmpresa": "EMP001",
+      "ordemVisualizacao": 1,
+      "vrCusto": "150.00",
+      "vrVenda": "200.00",
+      "carencia": "30 dias",
+      "mesAniversarioReajuste": "Janeiro",
+      "tipoReajuste": "Anual",
+      "adesao": "Sim",
+      "cobraDependentes": "Não",
+      "utilizaFaixaIdade": "Sim"
+    },
+    {
+      "codigo": "002",
+      "status": "ativo",
+      "tipoPlano": "Familiar",
+      "convenio": "Convênio B",
+      "grupoContrato": "Grupo 2",
+      "descricao": "Plano Familiar Completo",
+      "abreviacao": "PFC",
+      "entidade": "Entidade B",
+      "codigoExternoFornecedor": "FOR002",
+      "codigoExternoEmpresa": "EMP002",
+      "ordemVisualizacao": 2,
+      "vrCusto": "300.00",
+      "vrVenda": "400.00",
+      "carencia": "60 dias",
+      "mesAniversarioReajuste": "Março",
+      "tipoReajuste": "Semestral",
+      "adesao": "Sim",
+      "cobraDependentes": "Sim",
+      "utilizaFaixaIdade": "Não"
+    },
+    {
+      "codigo": "003",
+      "status": "ativo",
+      "tipoPlano": "Empresarial",
+      "convenio": "Convênio C",
+      "grupoContrato": "Grupo 3",
+      "descricao": "Plano Empresarial Premium",
+      "abreviacao": "PEP",
+      "entidade": "Entidade C",
+      "codigoExternoFornecedor": "FOR003",
+      "codigoExternoEmpresa": "EMP003",
+      "ordemVisualizacao": 3,
+      "vrCusto": "500.00",
+      "vrVenda": "650.00",
+      "carencia": "90 dias",
+      "mesAniversarioReajuste": "Junho",
+      "tipoReajuste": "Anual",
+      "adesao": "Sim",
+      "cobraDependentes": "Sim",
+      "utilizaFaixaIdade": "Sim"
+    },
+    {
+      "codigo": "004",
+      "status": "inativo",
+      "tipoPlano": "Individual",
+      "convenio": "Convênio D",
+      "grupoContrato": "Grupo 4",
+      "descricao": "Plano Individual Plus",
+      "abreviacao": "PIP",
+      "entidade": "Entidade D",
+      "codigoExternoFornecedor": "FOR004",
+      "codigoExternoEmpresa": "EMP004",
+      "ordemVisualizacao": 4,
+      "vrCusto": "180.00",
+      "vrVenda": "250.00",
+      "carencia": "45 dias",
+      "mesAniversarioReajuste": "Setembro",
+      "tipoReajuste": "Semestral",
+      "adesao": "Sim",
+      "cobraDependentes": "Não",
+      "utilizaFaixaIdade": "Não"
+    },
+    {
+      "codigo": "005",
+      "status": "ativo",
+      "tipoPlano": "Familiar",
+      "convenio": "Convênio E",
+      "grupoContrato": "Grupo 5",
+      "descricao": "Plano Familiar Básico",
+      "abreviacao": "PFB",
+      "entidade": "Entidade E",
+      "codigoExternoFornecedor": "FOR005",
+      "codigoExternoEmpresa": "EMP005",
+      "ordemVisualizacao": 5,
+      "vrCusto": "250.00",
+      "vrVenda": "320.00",
+      "carencia": "30 dias",
+      "mesAniversarioReajuste": "Dezembro",
+      "tipoReajuste": "Anual",
+      "adesao": "Sim",
+      "cobraDependentes": "Sim",
+      "utilizaFaixaIdade": "Sim"
+    }
+  ],
+  "opcoes": {
+    "status": [
+      { "value": "ativo", "label": "Ativo" },
+      { "value": "inativo", "label": "Inativo" },
+      { "value": "suspenso", "label": "Suspenso" }
+    ],
+    "tipoPlano": [
+      { "value": "Individual", "label": "Individual" },
+      { "value": "Familiar", "label": "Familiar" },
+      { "value": "Empresarial", "label": "Empresarial" },
+      { "value": "Coletivo", "label": "Coletivo" }
+    ],
+    "convenio": [
+      { "value": "Convênio A", "label": "Convênio A" },
+      { "value": "Convênio B", "label": "Convênio B" },
+      { "value": "Convênio C", "label": "Convênio C" },
+      { "value": "Convênio D", "label": "Convênio D" },
+      { "value": "Convênio E", "label": "Convênio E" }
+    ],
+    "grupoContratual": [
+      { "value": "Grupo 1", "label": "Grupo 1" },
+      { "value": "Grupo 2", "label": "Grupo 2" },
+      { "value": "Grupo 3", "label": "Grupo 3" },
+      { "value": "Grupo 4", "label": "Grupo 4" },
+      { "value": "Grupo 5", "label": "Grupo 5" }
+    ],
+    "pesquisar": [
+      { "value": "codigo", "label": "Código" },
+      { "value": "descricao", "label": "Descrição" },
+      { "value": "abreviacao", "label": "Abreviação" },
+      { "value": "entidade", "label": "Entidade" }
+    ]
+  }
+} 
