@@ -116,7 +116,7 @@ const InfoEntidade = () => {
   };
 
   if (screenState.voltar) {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Entidade}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}`);
   }
 
   const { openModal, closeModal, isModalOpen } = useModal();

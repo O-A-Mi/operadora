@@ -53,7 +53,7 @@ function NovaOperadora() {
     };
     
     if (screenState.voltar) {
-        handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Operadora}`);
+        handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}`);
     }
 
 

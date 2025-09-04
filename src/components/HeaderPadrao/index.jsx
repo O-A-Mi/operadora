@@ -417,7 +417,7 @@ const GuestUserMenu = ({ handleNavigate, showLogin, isMobile, onMenuOpen }) => {
           tabIndex="0" 
           onClick={() => handleAreaClick('cliente', jsonRoute.Cliente_login)}
         >
-          <span>Área do Conta</span>
+          <span>Área do Contratante</span>
         </li>
         <li 
           className={`${styles.headerMenuItem} ${selectedArea === 'beneficiario' ? styles.headerMenuItemActive : ''}`} 

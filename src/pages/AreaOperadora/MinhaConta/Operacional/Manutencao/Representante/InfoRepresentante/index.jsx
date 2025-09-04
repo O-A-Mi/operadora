@@ -77,7 +77,7 @@ const InfoRepresentante = () => {
 
   if (screenState.voltar) {
     showLoader();
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Representante}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}`);
   }
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);

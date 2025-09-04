@@ -54,7 +54,7 @@ function NovoPlanoSaude() {
     };
     
     if (screenState.voltar) {
-        handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.PlanoSaude}`);
+        handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}`);
     }
     
     function handleCoparticipacaoToggle(checked){

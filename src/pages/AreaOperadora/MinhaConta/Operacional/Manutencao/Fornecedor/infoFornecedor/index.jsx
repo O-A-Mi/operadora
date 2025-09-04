@@ -100,7 +100,7 @@ const InfoFornecedor = () => {
   };
 
   if (screenState.voltar) {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Fornecedor}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}`);
   }
 
   const { openModal, closeModal, isModalOpen } = useModal();

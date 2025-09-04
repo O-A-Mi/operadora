@@ -43,7 +43,7 @@ function ComboProduto() {
   }, [navigate]);
   
   const handleRowClick = useCallback((row, rowIndex) => {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`);
   }, [handleNavigate]);
   //listas
   const opStatus = [
@@ -327,7 +327,7 @@ const tableData = [
                   additionalButtons: [{
                     title: "Adicionar Produto/Serviço",
                     icon: "fa-regular fa fa-plus",
-                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`)
+                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`)
                   }]
                   }}
                 />

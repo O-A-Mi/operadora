@@ -165,7 +165,7 @@ function Funcionario() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   const handleRowClick = useCallback((row, rowIndex) => {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Funcionario}/${jsonRoute.FuncionarioCadastro}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}/${jsonRoute.FuncionarioCadastro}`);
   }, [handleNavigate]);
 
   useEffect(() => {
@@ -246,7 +246,7 @@ function Funcionario() {
                   additionalButtons: [{
                     title: 'Novo',
                     icon: 'fa-regular fa fa-plus',
-                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Funcionario}/${jsonRoute.FuncionarioCadastro}`)
+                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}/${jsonRoute.FuncionarioCadastro}`)
                   }]
                 }}
               />

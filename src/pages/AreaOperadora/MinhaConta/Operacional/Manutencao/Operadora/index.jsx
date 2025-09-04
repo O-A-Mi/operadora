@@ -160,7 +160,7 @@ function Operadora() {
                                 additionalButtons: [{
                                   title: "Adicionar Produto/Serviço",
                                   icon: "fa-regular fa fa-plus",
-                                  onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Operadora}/${jsonRoute.NovaOperadora}`)
+                                  onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}/${jsonRoute.NovaOperadora}`)
                               }]
                                 
                                 

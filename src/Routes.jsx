@@ -299,7 +299,7 @@ const ProjectRoutes = () => {
         <Route path={`${jsonRoute.Seguranca}/${jsonRoute.PermissaoInformacoes}`} element={<PermissaoInformacoes />} />
         <Route path={`${jsonRoute.Seguranca}/${jsonRoute.RelatoriosTab}`} element={<RelatoriosTab />} />
       </Route>
-            // ------------------- Area do Cliente ------------------- //
+            // ------------------- Area do Contratante ------------------- //
       <Route path={jsonRoute.Operadora_Login} element={<Operadora_Login />} />
       <Route path={jsonRoute.Cliente_login} element={<Cliente_login />} />
       <Route path={jsonRoute.Operadora_MinhaConta} element={<ProtectedRoute><Operadora_MinhaConta /></ProtectedRoute>}>
@@ -323,7 +323,7 @@ const ProjectRoutes = () => {
         <Route path={jsonRoute.CriarClientOperadora} element={<CriarClienteOperadora />} />
       </Route>
 
-      // ------------------- Area do Representante ------------------- //
+      // ------------------- Area do Consultor ------------------- //
       <Route path={jsonRoute.Representante_Login} element={<Representante_Login />} />
       <Route path={jsonRoute.Representante_Area} element={<ProtectedRoute><Representante_MinhaConta /></ProtectedRoute>}>
         <Route index element={<HomeRepresentante />} />

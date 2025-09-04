@@ -269,7 +269,7 @@ function Representante() {
 
   const handleRowClick = useCallback((row, rowIndex) => {
     showLoader();
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Representante}/${jsonRoute.RepresentanteCadastro}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}/${jsonRoute.RepresentanteCadastro}`);
 
   }, [handleNavigate]);
 
@@ -380,7 +380,7 @@ function Representante() {
                   additionalButtons: [{
                     title: 'Novo',
                     icon: 'fa-regular fa fa-plus',
-                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Representante}/${jsonRoute.RepresentanteCadastro}`)
+                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}/${jsonRoute.RepresentanteCadastro}`)
                   }]
                 }}
               />

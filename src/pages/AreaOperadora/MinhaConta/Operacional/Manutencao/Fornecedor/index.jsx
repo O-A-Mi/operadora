@@ -165,7 +165,7 @@ function Fornecedor() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   const handleRowClick = useCallback((row, rowIndex) => {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Fornecedor}/${jsonRoute.FornecedorCadastro}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}/${jsonRoute.FornecedorCadastro}`);
   }, [handleNavigate]);
 
   useEffect(() => {
@@ -246,7 +246,7 @@ function Fornecedor() {
                   additionalButtons: [{
                     title: 'Novo',
                     icon: 'fa-regular fa fa-plus',
-                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Fornecedor}/${jsonRoute.FornecedorCadastro}`)
+                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}/${jsonRoute.FornecedorCadastro}`)
                   }]
                 }}
               />

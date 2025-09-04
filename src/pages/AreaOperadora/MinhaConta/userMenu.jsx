@@ -164,7 +164,7 @@ const SUBMENUS = {
         submenu:
           [
             { label: "Contratante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}` },
-            // { label: "Segurado", path: `${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Segurado}`},
+            // { label: "Segurado", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Segurado}`},
             { label: "Colaborador", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}` },
             { label: "Representante", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Representante}` },
             { label: "Fornecedor", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Fornecedor}` },
@@ -175,13 +175,13 @@ const SUBMENUS = {
                   { label: "Dependente", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Depedente}` }
                 ],
             },
-            // { label: "Entidade/Empresa", path: `${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Entidade}`}, Serviço não oferecido
-            { label: "Tipo do Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}` },
-            { label: "Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.ProdutoServico}` },
+            // { label: "Entidade/Empresa", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}`}, Serviço não oferecido
+            // { label: "Tipo do Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}` },
+            { label: "Plano", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}` },
             // { label: "Operadora", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Operadora}`},
             { label: "Convênio", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.Convenio}` },
-            { label: "Atualização de Preço em Lote", path: `${jsonRoute.Configuracoes}/manutencao/${jsonRoute.AtualizacaoPrecoLote}` },
-            // { label: "Vigência e Transmissão em Lote", path: `${jsonRoute.Configuracoes}/manutencao/${jsonRoute.VigenciaTransmissao}`},
+            { label: "Atualização de Preço em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.AtualizacaoPrecoLote}` },
+            // { label: "Vigência e Transmissão em Lote", path: `${jsonRoute.Operacional}/manutencao/${jsonRoute.VigenciaTransmissao}`},
           ]
       },
 

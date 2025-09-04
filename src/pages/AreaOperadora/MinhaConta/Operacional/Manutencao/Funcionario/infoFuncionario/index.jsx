@@ -124,7 +124,7 @@ const InfoFuncionario = () => {
   };
 
   if (screenState.voltar) {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Funcionario}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Funcionario}`);
   }
 
   const { openModal, closeModal, isModalOpen } = useModal();

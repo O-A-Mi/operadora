@@ -165,7 +165,7 @@ function Entidade() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   const handleRowClick = useCallback((row, rowIndex) => {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Entidade}/${jsonRoute.EntidadeCadastro}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}/${jsonRoute.EntidadeCadastro}`);
   }, [handleNavigate]);
 
   useEffect(() => {
@@ -246,7 +246,7 @@ function Entidade() {
                   additionalButtons: [{
                     title: 'Novo',
                     icon: 'fa-regular fa fa-plus',
-                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Entidade}/${jsonRoute.EntidadeCadastro}`)
+                    onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Entidade}/${jsonRoute.EntidadeCadastro}`)
                   }]
                 }}
               />

@@ -560,7 +560,7 @@ const Contratante = () => {
                                     additionalButtons: [{
                                         title: "Adicionar Associado",
                                         icon: "fa-regular fa fa-plus",
-                                        onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Contratante}/${jsonRoute.NovoContratante}`)
+                                        onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}/${jsonRoute.NovoContratante}`)
                                     }]
                                     
                                 }}

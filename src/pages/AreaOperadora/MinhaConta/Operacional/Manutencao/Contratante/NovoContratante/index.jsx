@@ -100,7 +100,7 @@ function NovoContratante() {
   };
 
   if (screenState.voltar) {
-      handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.Contratante}`);
+      handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.Contratante}`);
   }
 
 

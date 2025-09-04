@@ -38,7 +38,7 @@ function PlanoSaude() {
   }, [navigate]);
   
   const handleRowClick = useCallback((row, rowIndex) => {
-    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`);
+    handleNavigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`);
   }, [handleNavigate]);
 
   //listas
@@ -216,7 +216,7 @@ const tableData = [
                       additionalButtons: [{
                         title: "Adicionar Produto/Serviço",
                         icon: "fa-regular fa fa-plus",
-                        onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Configuracoes}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`)
+                        onClick: () => navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/manutencao/${jsonRoute.PlanoSaude}/${jsonRoute.NovoPlanoSaude}`)
                       }]
                     }}
                   />
