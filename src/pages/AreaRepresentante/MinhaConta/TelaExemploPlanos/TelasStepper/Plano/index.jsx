@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import { UseInputPadrao, UseInputMask } from '../../../../../../../components/InputPadrao';
-import TogglePadrao from '../../../../../../../components/TogglePadrao';
+import { UseInputPadrao, UseInputMask } from '../../../../../../components/InputPadrao';
+import TogglePadrao from '../../../../../../components/TogglePadrao';
 
 const Plano = ({ 
   modoEdicao = false,

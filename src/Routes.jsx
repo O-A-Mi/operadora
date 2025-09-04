@@ -110,8 +110,6 @@ import Dependente from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/
 import Entidade from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Entidade"
 import Fornecedor from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Fornecedor"
 import Funcionario from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Funcionario"
-import ComboProduto from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/ComboProduto"
-import NovoComboProdutoServico from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/ComboProduto/NovoComboProdutoServico";
 import Representante from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Representante"
 import Segurado from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Segurado"
 import NovoSegurado from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Segurado/NovoSegurado";
@@ -120,6 +118,9 @@ import InfoRepresentante from "./pages/AreaOperadora/MinhaConta/Operacional/Manu
 import InfoFuncionario from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Funcionario/infoFuncionario";
 import InfoFornecedor from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Fornecedor/infoFornecedor";
 import InfoEntidade from "./pages/AreaOperadora/MinhaConta/Operacional/Manutencao/Entidade/infoEntidade";
+// ------------------  COMBO PRODUTOS E SERVIÇOS ---------------------- //
+import ComboPlanos from './pages/AreaRepresentante/MinhaConta/TelaExemploPlanos'
+import ComboPlanosNovo from './pages/AreaRepresentante/MinhaConta/TelaExemploPlanos/Novo'
 
 // ------------------- Area do Cliente ------------------- //
 import Cliente_login from "./pages/AreaCliente/LoginCliente/index.jsx";
@@ -157,6 +158,8 @@ import Perguntas_Declaracao from "./pages/AreaBeneficiario/MinhaConta/Perguntas/
 import Dados_do_Beneficiario from "./pages/AreaBeneficiario/MinhaConta/DadosCliente/index.jsx";
 import QuestionarioPerguntasVida from "./pages/AreaBeneficiario/MinhaConta/Perguntas/components/FaseAtendimento/index.jsx";
 import QuestionarioPerguntasDeclaracao from "./pages/AreaBeneficiario/MinhaConta/Questionario/components/FaseAtendimento/index.jsx";
+import ComboProduto from './pages/AreaOperadora/MinhaConta/Operacional/Manutencao/ComboProduto/index';
+
 
 
 
@@ -196,8 +199,8 @@ const ProjectRoutes = () => {
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Segurado}`} element={<Segurado />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.Segurado}/${jsonRoute.NovoSegurado}`} element={<NovoSegurado />}/>
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.VigenciaTransmissao}`} element={<VigenciaTransmissao />}/>
-          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}`} element={<ComboProduto />}/>
-          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`} element={<NovoComboProdutoServico />} />
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}`} element={<ComboPlanos />}/>
+          <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`} element={<ComboPlanosNovo />} />
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroBeneficiarios}`} element={<CadastroBeneficiarios />} />
           <Route path={`${jsonRoute.Operacional}/manutencao/${jsonRoute.CadastroBeneficiarios}/${jsonRoute.CadastroBeneficiarioNovo}`} element={<CriarBeneficiario />} />
 

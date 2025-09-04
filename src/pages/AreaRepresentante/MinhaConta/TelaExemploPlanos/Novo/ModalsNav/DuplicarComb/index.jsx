@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
-import TogglePadrao from '../../../../../../../../components/TogglePadrao';
-import { UseInputPadrao, UseInputMask } from '../../../../../../../../components/InputPadrao';
-import toastMessage from '../../../../../../../../assets/toast-ui/toast';
-import { useLoader } from '../../../../../../../../context';
+import TogglePadrao from '../../../../../../../components/TogglePadrao';
+import { UseInputPadrao, UseInputMask } from '../../../../../../../components/InputPadrao';
+import toastMessage from '../../../../../../../assets/toast-ui/toast';
+import { useLoader } from '../../../../../../../context';
 
 const DuplicarComb = ({ isOpen, onClose, onSubmit }) => {
   const [descricao, setDescricao, descricaoRef] = UseInputMask();
