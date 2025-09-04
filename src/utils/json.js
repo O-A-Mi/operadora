@@ -73,7 +73,7 @@ export const jsonRoute = {
   CadastroBeneficiarioNovo: "cadastro",
   InfoRepresentante : "informacoes-representante",
   CadastroPlanos: "plano-servico",
-  CadastroPlanosNovo: "cadastro",
+  CadastroPlanosNovo: "cadastro-plano-servico",
   ComboProduto: "combo",
   NovoComboProdutoServico: "novo-combo",
   MovBeneficiario: "movimentacoes-beneficiario",

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { UseInputPadrao, UseInputMask } from '../../../../../components/InputPadrao';
-import TabelaPadrao from '../../../../../components/TabelaPadrao';
+import { UseInputPadrao, UseInputMask } from '../../../../components/InputPadrao';
+import TabelaPadrao from '../../../../components/TabelaPadrao';
 import { useNavigate } from 'react-router';
-import { jsonRoute } from '../../../../../utils/json.js';
-import { limparFiltros } from '../../../../../utils/functions';
+import { jsonRoute } from '../../../../utils/json.js';
+import { limparFiltros } from '../../../../utils/functions';
 import styles from './styles.module.css';
 import dadosPlanos from './dados-planos.json';
-import { useLoader } from '../../../../../context/index.jsx';
+import { useLoader } from '../../../../context/index.jsx';
 
 const CadastroPlanos = () => {
   const navigate = useNavigate();
@@ -117,7 +117,7 @@ const CadastroPlanos = () => {
 
   const handleRowClick = (row, rowIndex) => {
     showLoader();
-    navigate(`/${jsonRoute.AreaDronline}/${jsonRoute.Operacional}/${jsonRoute.CadastroPlanos}/${jsonRoute.CadastroPlanosNovo}`, {
+    navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`, {
       state: {
         planoParaEdicao: row,
         modoEdicao: true
@@ -269,7 +269,7 @@ const CadastroPlanos = () => {
                   icon: 'fa-regular fa fa-plus',
                   onClick: () => {
                     showLoader();
-                    navigate(`/${jsonRoute.AreaDronline}/${jsonRoute.Operacional}/${jsonRoute.CadastroPlanos}/${jsonRoute.CadastroPlanosNovo}`);
+                    navigate(`/${jsonRoute.AreaOperadora}/${jsonRoute.Operacional}/${jsonRoute.Manutencao}/${jsonRoute.ComboProduto}/${jsonRoute.NovoComboProdutoServico}`);
                   }
                 }
               ]

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import styles from './styles.module.css';
-import TooltipPadrao from '../../../../../../components/TooltipPadrao';
+import TooltipPadrao from '../../../../../components/TooltipPadrao';
 import Plano from '../TelasStepper/Plano/index.jsx';
 import FaixaTitular from '../TelasStepper/FaixaTitular/index.jsx';
 import FaixaDependente from '../TelasStepper/FaixaDependente/index.jsx';
@@ -14,13 +14,13 @@ import ValorTaxas from '../TelasStepper/ValorTaxas/index.jsx';
 import Mensagens from '../TelasStepper/Mensagens/index.jsx';
 import FormContrato from '../TelasStepper/FormContrato/index.jsx';
 import Especialidade from '../TelasStepper/Especialidade/index.jsx';
-import { handleResizeTabela  } from '../../../../../../utils/functions.js';
-import toastMessage from '../../../../../../assets/toast-ui/toast';
-import dialogMessage from '../../../../../../assets/dialog-ui/dialog';
+import { handleResizeTabela  } from '../../../../../utils/functions.js';
+import toastMessage from '../../../../../assets/toast-ui/toast';
+import dialogMessage from '../../../../../assets/dialog-ui/dialog';
 import LogAuditoria from './ModalsNav/LogAuditoria/index.jsx';
 import DuplicarComb from './ModalsNav/DuplicarComb/index.jsx';
-import { useLoader } from '../../../../../../context/index.jsx';
-import ActionButtonsPadrao from '../../../../../../components/ActionButtonsPadrao';
+import { useLoader } from '../../../../../context/index.jsx';
+import ActionButtonsPadrao from '../../../../../components/ActionButtonsPadrao';
 
 const ComboNovo = () => {
   const navigate = useNavigate();

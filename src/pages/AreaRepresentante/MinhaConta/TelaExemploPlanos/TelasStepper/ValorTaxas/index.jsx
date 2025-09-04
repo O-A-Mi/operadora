@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { UseInputPadrao, UseInputMask } from '../../../../../../../components/InputPadrao';
-import { TabelaPadrao } from '../../../../../../../components';
-import dialogMessage from '../../../../../../../assets/dialog-ui/dialog';
+import { UseInputPadrao, UseInputMask } from '../../../../../../components/InputPadrao';
+import { TabelaPadrao } from '../../../../../../components';
+import dialogMessage from '../../../../../../assets/dialog-ui/dialog';
 import styles from './styles.module.css';
 
 const ValorTaxas = ({ isMobile = false, currentStep }) => {

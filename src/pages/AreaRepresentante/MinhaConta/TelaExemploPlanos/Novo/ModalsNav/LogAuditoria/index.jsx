@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
-import TabelaPadrao from '../../../../../../../../components/TabelaPadrao';
-import { UseInputPadrao, UseInputMask } from '../../../../../../../../components/InputPadrao';
+import TabelaPadrao from '../../../../../../../components/TabelaPadrao';
+import { UseInputPadrao, UseInputMask } from '../../../../../../../components/InputPadrao';
 import dadosLogAuditoria from './dados.json';
 
 const LogAuditoria = ({ isOpen, onClose }) => {
